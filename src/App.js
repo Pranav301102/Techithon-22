@@ -1,14 +1,18 @@
 
-import { useState,  Suspense } from 'react'
+import { Suspense , useRef} from 'react'
 import { Canvas} from '@react-three/fiber'
-import { Reflector, CameraShake, OrbitControls, useTexture, Html } from '@react-three/drei'
+import { CameraShake, OrbitControls,Html } from '@react-three/drei'
 import { KernelSize } from 'postprocessing'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import {Model} from './components/model'
+import { Header } from './components/header'
+import './styles.css'
 
 export default function App() {
   return (
-    <Canvas dpr={(window.devicePixelRatio)*2} camera={{ position: [0, 0, 15] }}>
+    <>
+    <div id = 'container'>
+    <Canvas class= 'canvas' dpr={(window.devicePixelRatio)*2} camera={{ position: [0, 0, 15] }}>
       <color attach="background" args={['black']} />
       <ambientLight />
       <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
@@ -21,5 +25,10 @@ export default function App() {
       </Suspense>
       <CameraShake yawFrequency={0.2} pitchFrequency={0.2} rollFrequency={0.2} />
     </Canvas>
+      <div class = 'overlay'>
+      <Header/>
+      </div>
+    </div>
+    </>
   )
 }
