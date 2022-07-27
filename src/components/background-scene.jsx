@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { useState, useRef,  useMemo } from 'react'
 import {  useThree, useFrame, useLoader } from '@react-three/fiber'
-import { Reflector, useTexture, Html } from '@react-three/drei'
+import { Reflector, useTexture, Html ,useScroll } from '@react-three/drei'
 
 
 import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader'
@@ -25,10 +25,15 @@ function Triangle({ color, ...props }) {
     const ref = useRef()
     const vec = new THREE.Vector3()
     const { camera, mouse } = useThree()
+    const scroll = useScroll()
+    const offset = 1 - scroll.offset
+    console.log(offset)
     useFrame(() => {
-      camera.position.lerp(vec.set(mouse.x * 2, 0, 3.5), 0.05)
+      // camera.position.set(Math.sin(offset) * -10, Math.atan(offset * Math.PI * 2) * 5, Math.cos((offset * Math.PI) / 3) * -10)
+      camera.position.lerp(vec.set(mouse.x * 2 , 0, 3.5), 0.05)
       ref.current.position.lerp(vec.set(mouse.x * 1 + 1, mouse.y * 0.1, 0), 0.1)
       ref.current.rotation.y = THREE.MathUtils.lerp(ref.current.rotation.y, (-mouse.x * Math.PI) / 20, 0.1)
+      camera.lookAt(vec.set(0, 0, 0))
     })
     return <group ref={ref}>{children}</group>
   }
