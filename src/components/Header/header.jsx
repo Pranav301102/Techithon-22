@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles.css'
+import './header.css'
 
 export function Header() {
   return (
@@ -24,5 +24,6 @@ export function Header() {
         </nav>
       </div>
     </header>
+    
   );
 }

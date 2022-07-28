@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(44, 43, 43);
+    color: #fff;
+    opacity: 0.8;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    padding: 0 30px;
+    z-index: 60;
+  }
+  
+  .canvas{
+    z-index: 30;
+  }
+  
+  .navbar ul {
+    display: flex;
+  }
+   
+  .navbar li {
+    list-style-type: none;
+    padding: 10px;
+  } 
+  
+  .navbar a {
+    text-decoration: none;
+  }
+  .navbar a {
+    font-size: 25px;
+    color: #fff;
+  }
+  .navbar .log {
+    font-weight: 400;
+  } 
+  
+  .navbar h1{
+    font-size: 30px;
+  } 
+  
