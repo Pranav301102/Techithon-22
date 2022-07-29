@@ -1,0 +1,52 @@
+.card{
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  /* margin-left: 20px; */
+  padding: 20px;
+background: rgba( 9, 9, 9, 0.25 );
+/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px ); */
+/* -webkit-backdrop-filter: blur( 4px ); */
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+.card:hover{
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+transition: 300ms;
+}
+.GridCards{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 30px;
+  row-gap: 60px;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.card h2{
+  color: white;
+
+}
+.disc{
+  color: rgb(99, 99, 99);
+}
+.btn{
+  width: 300px;
+  height: 30px;
+  margin-top: 45px;
+  margin-left: -21px;
+  background-color: transparent;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+ color: white;
+ border-top: 1px solid rgb(117, 117, 255);
+ border-left: none;
+ border-right: none;
+ border-bottom:none ;
+}
+.btn:hover{
+  background-color: rgb(94, 94, 253);
+  border: none;
+}

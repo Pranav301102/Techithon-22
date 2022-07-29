@@ -9,6 +9,7 @@ import {Model} from './components/model'
 import { Header } from './components/Header/header'
 import './styles.css'
 import Overlay from './components/overlay'
+import EventCards from './components/Cards/EventCards'
 
 // (window.devicePixelRatio)
 export default function App() {
@@ -36,7 +37,9 @@ export default function App() {
     <div className = 'overlay'>
       <Header/>
     </div>
+    
     </div>
+    {/* <EventCards/> */}
     </>
   )
 }
