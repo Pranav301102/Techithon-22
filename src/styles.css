@@ -45,6 +45,7 @@ body,
   overflow-y: auto;
   scroll-snap-type: y proximity;
   z-index: 40;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scroll > div {
@@ -73,6 +74,7 @@ body {
   line-height: 1em;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: auto;
+  
 }
 
 .dot {
@@ -82,7 +84,7 @@ body {
   display: inline-block;
   max-width: 600px;
   padding: 0;
-  padding: 80px;
+  padding: 80px 40px ; 
   color: #a0a0a0;
   line-height: 1.6em;
   font-size: 15px;

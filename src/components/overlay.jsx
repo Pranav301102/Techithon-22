@@ -10,7 +10,7 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
     ref={ref}
     onScroll={(e) => {
       scroll.current = e.target.scrollTop / (e.target.scrollHeight - window.innerHeight)
-      caption.current.innerText = scroll.current.toFixed(2)
+      // caption.current.innerText = scroll.current.toFixed(2)
     }}
 
     className="scroll">
@@ -28,9 +28,9 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
         Labore non aute sunt commodo aliqua ipsum ea ullamco deserunt.
       </div>
     </div>
-    <span className="caption" ref={caption}>
+    {/* <span className="caption" ref={caption}>
       0.00
-    </span>
+    </span> */}
   </div>
   </>
 ))

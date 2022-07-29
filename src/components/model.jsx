@@ -19,20 +19,18 @@ function Triangle({ color, ...props }) {
     )
   }
   
-  function Rig({ children ,caption}) {
+  function Rig({ children ,scroll}) {
     const ref = useRef()
     const vec = new THREE.Vector3()
     const { mouse ,camera } = useThree()
-    console.log({caption})
-    // const scroll = useScroll()
-    // const offset = 1 - scroll.offset
-    // console.log(offset)
+
     useFrame(() => {
+      const offset = scroll.current
       // camera.position.set(Math.sin(offset) * -10, Math.atan(offset * Math.PI * 2) * 5, Math.cos((offset * Math.PI) / 3) * -10)
-      camera.position.lerp(vec.set(mouse.x * 2 , 0, 3.5), 0.05)
+      camera.position.lerp(vec.set(mouse.x*0.5  + Math.sin(offset) * 5 ,Math.atan(offset * Math.PI * 2)*1 , 5 + Math.cos((offset) / 3)*-2  ), 0.05)
       ref.current.position.lerp(vec.set(mouse.x * 1 + 1, mouse.y * 0.1, 0), 0.1)
       ref.current.rotation.y = THREE.MathUtils.lerp(ref.current.rotation.y, (-mouse.x * Math.PI) / 20, 0.1)
-    //   camera.lookAt(vec.set(0, 0, 0))
+      camera.lookAt(vec.set(0, 0, 0))
     })
     return <group ref={ref}>{children}</group>
   }
@@ -46,9 +44,9 @@ function Triangle({ color, ...props }) {
     )
   }
 
-export function Model({caption}){
+export function Model({scroll}){
     return(
-    <Rig caption={caption}>
+    <Rig scroll={scroll}>
         <Triangle color="#ff2060" scale={0.009} rotation={[0, 0, Math.PI / 3]} />
         <Triangle color="cyan" scale={0.009} position={[2, 0, -2]} rotation={[0, 0, Math.PI / 3]} />
         <Triangle color="orange" scale={0.009} position={[-2, 0, -2]} rotation={[0, 0, Math.PI / 3]} />

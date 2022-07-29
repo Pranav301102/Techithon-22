@@ -24,7 +24,7 @@ export default function App() {
       <ambientLight />
       <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
       <Suspense fallback={null}>
-        <Model caption={caption}/>
+        <Model scroll={scroll}/>
         <EffectComposer multisampling={8}>
           <Bloom kernelSize={3} luminanceThreshold={0} luminanceSmoothing={0.4} intensity={0.6} />
           <Bloom kernelSize={KernelSize.HUGE} luminanceThreshold={0} luminanceSmoothing={0} intensity={2} />
