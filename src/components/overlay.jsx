@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react"
 import { Header } from "./Header/header"
 import '../styles.css'
+import { useFrame } from '@react-three/fiber';
 
 const Overlay = forwardRef(({ caption, scroll }, ref) => (
   <>
@@ -11,24 +12,25 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
       scroll.current = e.target.scrollTop / (e.target.scrollHeight - window.innerHeight)
       caption.current.innerText = scroll.current.toFixed(2)
     }}
-    class="scroll">
+
+    className="scroll">
     <div style={{ height: "200vh" }}>
-      <div class="dot">
-        <h1>IEE</h1>
+      <div className="dot">
+        <h1>IEEE</h1>
         <h1>Techithon</h1>
         <h1>2022</h1>
         Aliquip eiusmod dolor magna exercitation labore ex eiusmod aute enim.
       </div>
     </div>
     <div style={{ height: "200vh" }}>
-      <div class="dot">
+      <div className="dot">
         <h1>Events</h1>
         Labore non aute sunt commodo aliqua ipsum ea ullamco deserunt.
       </div>
     </div>
-    {/* <span class="caption" ref={caption}>
+    <span className="caption" ref={caption}>
       0.00
-    </span> */}
+    </span>
   </div>
   </>
 ))

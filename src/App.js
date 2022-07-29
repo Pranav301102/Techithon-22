@@ -15,15 +15,16 @@ export default function App() {
   const overlay = useRef()
   const caption = useRef()
   const scroll = useRef(0)
+
   return (
     <>
     <div id = 'container'>
-    <Canvas className= 'canvas' dpr={[1, 1.5]} camera={{ position: [0, 0, 15] }}>
+    <Canvas className= 'canvas' dpr={[1, 1.5]} camera={{ position: [0, 0, 15] }} onCreated={(state) => state.events.connect(overlay.current)}>
       <color attach="background" args={['black']} />
       <ambientLight />
       <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
       <Suspense fallback={null}>
-        <Model/>
+        <Model caption={caption}/>
         <EffectComposer multisampling={8}>
           <Bloom kernelSize={3} luminanceThreshold={0} luminanceSmoothing={0.4} intensity={0.6} />
           <Bloom kernelSize={KernelSize.HUGE} luminanceThreshold={0} luminanceSmoothing={0} intensity={2} />

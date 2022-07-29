@@ -19,10 +19,11 @@ function Triangle({ color, ...props }) {
     )
   }
   
-  function Rig({ children }) {
+  function Rig({ children ,caption}) {
     const ref = useRef()
     const vec = new THREE.Vector3()
-    const { camera, mouse } = useThree()
+    const { mouse ,camera } = useThree()
+    console.log({caption})
     // const scroll = useScroll()
     // const offset = 1 - scroll.offset
     // console.log(offset)
@@ -45,9 +46,9 @@ function Triangle({ color, ...props }) {
     )
   }
 
-export function Model(){
+export function Model({caption}){
     return(
-    <Rig>
+    <Rig caption={caption}>
         <Triangle color="#ff2060" scale={0.009} rotation={[0, 0, Math.PI / 3]} />
         <Triangle color="cyan" scale={0.009} position={[2, 0, -2]} rotation={[0, 0, Math.PI / 3]} />
         <Triangle color="orange" scale={0.009} position={[-2, 0, -2]} rotation={[0, 0, Math.PI / 3]} />
