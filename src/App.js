@@ -6,17 +6,16 @@ import { CameraShake, OrbitControls,Html,ScrollControls,useScroll, Scroll } from
 import { KernelSize } from 'postprocessing'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import {Model} from './components/model'
-import { Header } from './components/Header/header'
 import './styles.css'
 import Overlay from './components/overlay'
-import EventCards from './components/Cards/EventCards'
 
 // (window.devicePixelRatio)
 export default function App() {
   const overlay = useRef()
   const caption = useRef()
   const scroll = useRef(0)
-
+  // this line giving probs
+  // onCreated={(state) => state.events.connect(overlay.current)}
   return (
     <>
     <div id = 'container'>
@@ -34,12 +33,7 @@ export default function App() {
       <CameraShake yawFrequency={0.2} pitchFrequency={0.2} rollFrequency={0.2} />
     </Canvas>
     <Overlay ref={overlay} caption={caption} scroll={scroll} />
-    <div className = 'overlay'>
-      <Header/>
     </div>
-    
-    </div>
-    {/* <EventCards/> */}
     </>
   )
 }

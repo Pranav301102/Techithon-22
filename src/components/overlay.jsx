@@ -2,6 +2,7 @@ import React, { forwardRef } from "react"
 import { Header } from "./Header/header"
 import '../styles.css'
 import { useFrame } from '@react-three/fiber';
+import EventCards from './Cards/EventCards';
 
 const Overlay = forwardRef(({ caption, scroll }, ref) => (
   <>
@@ -22,11 +23,17 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
         Aliquip eiusmod dolor magna exercitation labore ex eiusmod aute enim.
       </div>
     </div>
-    <div style={{ height: "200vh" }}>
+    <div id="events" style={{ height: "120vh" }}>
       <div className="dot">
         <h1>Events</h1>
         Labore non aute sunt commodo aliqua ipsum ea ullamco deserunt.
       </div>
+      <EventCards/>
+    </div>
+    <div style={{ height: "50vh" }}>
+      <div className="footer">
+        <h1>Sponsers</h1>
+    </div>
     </div>
     {/* <span className="caption" ref={caption}>
       0.00
