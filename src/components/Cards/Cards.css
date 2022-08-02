@@ -1,23 +1,20 @@
-.card{
+.card {
   border: 1px solid red;
   width: 300px;
   height: 300px;
-  /* margin-left: 20px; */
-  padding: 20px;
-background: rgba( 9, 9, 9, 0.25 );
-/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px ); */
-/* -webkit-backdrop-filter: blur( 4px ); */
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
 
+  padding: 20px;
+  background: rgba(9, 9, 9, 0.25);
+  
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.card:hover{
+.card:hover {
   box-shadow: 0 8px 32px 0 rgb(31, 38, 135);
-backdrop-filter: blur( 6px );
-transition: 300ms;
+  backdrop-filter: blur(6px);
+  transition: 300ms;
 }
-.GridCards{
+.GridCards {
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 30px;
@@ -26,28 +23,60 @@ transition: 300ms;
   margin-top: 100px;
   z-index: 50;
 }
-.card h2{
+.card h2 {
   color: white;
-
 }
-.disc{
+.disc {
   color: rgb(99, 99, 99);
 }
-.btn{
+.btn {
   width: 300px;
   height: 30px;
   margin-top: 45px;
   margin-left: -21px;
   background-color: transparent;
- border-bottom-left-radius: 10px;
- border-bottom-right-radius: 10px;
- color: white;
- border-top: 1px solid rgb(117, 117, 255);
- border-left: none;
- border-right: none;
- border-bottom:none ;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  border-top: 1px solid rgb(117, 117, 255);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
-.btn:hover{
+.btn:hover {
   background-color: rgb(94, 94, 253);
   border: none;
+}
+
+
+@media only screen and  (max-width: 500px) {
+
+  .GridCards{
+    display: grid;
+    grid-template-columns: auto ;
+    column-gap: 10px;
+    row-gap: 60px;
+    width: 400px;
+    margin-left: 60px;
+    margin-top: 10px;
+    z-index: 50;
+    
+  }
+  
+}
+/* ipad mini*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .GridCards{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 60px;
+    width: 400px;
+    margin-left: 70px;
+    margin-top: 10px;
+    z-index: 50;
+  
+  }
+  
 }
