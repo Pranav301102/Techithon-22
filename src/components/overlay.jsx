@@ -6,18 +6,17 @@ import EventCards from './Cards/EventCards';
 
 const Overlay = forwardRef(({ caption, scroll }, ref) => (
   <>
-  <Header />
   <div
     ref={ref}
     onScroll={(e) => {
       scroll.current = e.target.scrollTop / (e.target.scrollHeight - window.innerHeight)
       // caption.current.innerText = scroll.current.toFixed(2)
     }}
-
     className="scroll">
+    <Header />
     <div style={{ height: "200vh" }}>
       <div className="dot">
-        <h1>IEEE</h1>
+        <h1 id="ieee">IEEE</h1>
         <h1>Techithon</h1>
         <h1>2022</h1>
         Aliquip eiusmod dolor magna exercitation labore ex eiusmod aute enim.
