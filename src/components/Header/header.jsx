@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './header.css'
 
 // export function Header() {
@@ -45,41 +46,40 @@ export function Header() {
           </h1>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <a href ='/home'
+              <Link to ="/"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                href="/about"
+              <Link to ="/about"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/home"
+              <Link to ="/events"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
                 Events
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href = "/home"
+              <Link to ="/login"
                 activeClassName="active"
                 className="nav-links"
                onClick={click ? handleClick : null}
               >
                 Login
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>

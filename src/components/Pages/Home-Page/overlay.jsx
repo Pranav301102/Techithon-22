@@ -1,8 +1,8 @@
 import React, { forwardRef } from "react"
-import { Header } from "./Header/header"
-import '../styles.css'
+import { Header } from "../../Header/header"
+import './home.css'
 import { useFrame } from '@react-three/fiber';
-import EventCards from './Cards/EventCards';
+import EventCards from '../../Cards/EventCards';
 
 const Overlay = forwardRef(({ caption, scroll }, ref) => (
   <>
@@ -13,7 +13,6 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
       // caption.current.innerText = scroll.current.toFixed(2)
     }}
     className="scroll">
-    <Header />
     <div style={{ height: "100vh" }}>
       <div className="dot">
         <h1 id="ieee">IEEE Techithon 2022</h1>
