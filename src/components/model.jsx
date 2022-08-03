@@ -25,7 +25,6 @@ function Triangle({ color, ...props }) {
     const { mouse ,camera } = useThree()
 
     useFrame(() => {
-
       const offset = scroll.current
       // camera.position.set(Math.sin(offset) * -10, Math.atan(offset * Math.PI * 2) * 5, Math.cos((offset * Math.PI) / 3) * -10)
       camera.position.lerp(vec.set(mouse.x*0.5  + Math.sin(offset) * 5 ,Math.atan(offset * Math.PI * 2)*1 , 5 + Math.cos((offset) / 3)*-2  ), 0.05)

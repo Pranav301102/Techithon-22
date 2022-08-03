@@ -108,6 +108,7 @@
   .nav-item {
     line-height: 40px;
     margin-right: 1rem;
+    background-color: transparent;
   }
   
   .nav-item:after {
@@ -123,11 +124,11 @@
     width: 100%;
     background: linear-gradient(to right,#ff2060,cyan);
   }
-  
+/*   
   .nav-item.active {
     color: #ffffff;
     border: 1px solid #ffffff;
-  }
+  } */
   
   .nav-icon {
     display: none;

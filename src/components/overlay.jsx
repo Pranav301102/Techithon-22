@@ -16,15 +16,19 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
     <Header />
     <div style={{ height: "100vh" }}>
       <div className="dot">
-        <h1 id="ieee">IEEE</h1>
-        <h1>Techithon</h1>
-        <h1>2022</h1>
-        Aliquip eiusmod dolor magna exercitation labore ex eiusmod aute enim.
+        <h1 id="ieee">IEEE Techithon 2022</h1>
+        <img src="logo.png" alt="carnivel"></img>
       </div>
     </div>
-    <div className="Events" >
-      <div className="event-cards">
-        <h1 className="eventLink">Events</h1>
+    <div className="Event-cards" >
+      <div className="events">
+        <h1 className="event-link" >Your Events</h1>
+        <EventCards/>
+      </div>
+    </div>
+    <div className="Event-cards" >
+      <div className="events">
+        <h1 className="event-link" >Events</h1>
         <EventCards/>
       </div>
     </div>

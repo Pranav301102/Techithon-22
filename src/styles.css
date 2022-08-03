@@ -64,44 +64,45 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.caption {
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 80px;
-  color: white;
-  font-size: 8em;
-  font-weight: 100;
-  line-height: 1em;
-  font-variant-numeric: tabular-nums;
-  -webkit-font-smoothing: auto;
-  
-}
 
 .dot {
   pointer-events: none;
   position: sticky;
   top: 0px;
   display: inline-block;
-  max-width: 600px;
+  width: 100%;
   padding: 0;
   padding: 80px 40px ; 
   color: #a0a0a0;
   line-height: 1.6em;
   font-size: 15px;
   letter-spacing: 1.5px;
+  
 }
 
 .dot > h1 {
   -webkit-font-smoothing: auto;
   pointer-events: none;
   color: white;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 100;
   line-height: 1em;
   margin: 0;
   margin-bottom: 0.25em;
+  text-align: center;
+  justify-content: center;
+}
+
+.dot > img{
+  -webkit-font-smoothing: auto;
+  pointer-events: none;
+  margin: 0;
+  margin-bottom: 0.25em;
+  text-align: center;
+  display:block;
+  margin:auto;
+  width: 50%;
+  height: 50%;
 }
 
 
@@ -127,50 +128,55 @@ body {
   display:block;
 }
 
-.events{
+
+.event-link{
   display:block;
   line-height: 40px;
   margin-right: 1rem;
+
 }
 
-.events:after {
+.event-link:after {
   content: "";
   display: block;
   height: 3px;
   width: 0;
+  max-width: 10rem;
   background: transparent;
-  transition: width 0.7s ease, background-color 0.5s ease;
+  transition: width 5s ease, background-color 0.5s ease;
 }
 
-.events:hover:after {
+.event-link:hover:after {
   width: 100%;
   background: linear-gradient(to right,#ff2060,cyan);
 }
 
-.events.active {
+.event-link.active {
   color: #ffffff;
   border: 1px solid #ffffff;
 }
 
-.eventLink{
+.event-link{
   font-size: "5em";
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 5.5rem;
   height: 100%;
   border-bottom: 3px solid transparent;
 }
 
 
 @media only screen and (max-width: 1000px) {
-  .caption {
-    font-size: 4em;
+  .dot > img{
+  width: 50%;
+  height: 50%;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .caption {
-    font-size: 3em;
+  .dot > img{
+  width: 60%;
+  height: 60%;
   }
   .dot > h1 {
     font-size: 3em;
@@ -178,19 +184,21 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-  .caption {
-    font-size: 2em;
+  .dot > img{
+  width: 70%;
+  height:70%;
   }
   .dot > h1 {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .caption {
-    font-size: 1em;
+  .dot > img{
+  width: 80%;
+  height: 80%;
   }
   .dot > h1 {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
