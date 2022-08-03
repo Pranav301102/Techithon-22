@@ -6,6 +6,8 @@ function EventCards() {
     <>
     <div className="GridCards">
         <Card/>
+        <Card/>
+        <Card/>
     </div>
   
     </>

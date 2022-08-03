@@ -83,6 +83,7 @@
     text-decoration: none;
     font-size: 2rem;
     flex-grow: 1;
+    padding: 10px;
   }
   
   .nav-menu {
@@ -91,7 +92,8 @@
     text-align: center;
     margin-right: 2rem;
   }
-  
+
+ 
   .nav-links {
     color: #fff;
     text-decoration: none;
@@ -119,7 +121,7 @@
   
   .nav-item:hover:after {
     width: 100%;
-    background: #505050;
+    background: linear-gradient(to right,#ff2060,cyan);
   }
   
   .nav-item.active {

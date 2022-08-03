@@ -39,9 +39,10 @@ export function Header() {
      <div className={click ? "main-container" : ""}  onClick={()=>Close()} />
       <nav className="navbar" onClick={e => e.stopPropagation()}>
         <div className="nav-container">
-          <a href="/home" className="nav-logo">
-            Techithon
-          </a>
+        <img src="IEEE_Atharva_logo_-removebg.png" alt="IEEE" height="50px" width="120px"></img>
+          <h1 className="nav-logo">
+             Techithon
+          </h1>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <a href ='/home'
