@@ -17,7 +17,12 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
     <div style={{ height: "100vh" }}>
       <div className="dot">
         <h1 id="ieee">IEEE Techithon 2022</h1>
+        {/* <h1> fest theme</h1> */}
         <img src="logo.png" alt="carnivel"></img>
+        <div className="buttons">
+        <button  className="neon-button">Signup</button>
+        <button className="neon-button">Sign In</button>
+        </div>
       </div>
     </div>
     <div className="Event-cards" >
@@ -47,7 +52,7 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
 export default Overlay
 
 
-{/* <ScrollContainer>
+/* <ScrollContainer>
       <ScrollPage page={0}>
         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
           <span style={{ fontSize: "3em" }}>Let't me show you scroll animation 😀</span>
@@ -79,4 +84,4 @@ export default Overlay
           </span>
         </Animator>
       </ScrollPage>
-    </ScrollContainer> */}
+    </ScrollContainer> */
