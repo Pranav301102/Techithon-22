@@ -47,7 +47,6 @@ export function Header() {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link to ="/"
-                activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
@@ -56,7 +55,6 @@ export function Header() {
             </li>
             <li className="nav-item">
               <Link to ="/about"
-                activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
@@ -65,7 +63,6 @@ export function Header() {
             </li>
             <li className="nav-item">
               <Link to ="/events"
-                activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
@@ -74,7 +71,6 @@ export function Header() {
             </li>
             <li className="nav-item">
               <Link to ="/login"
-                activeClassName="active"
                 className="nav-links"
                onClick={click ? handleClick : null}
               >
