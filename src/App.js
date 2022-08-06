@@ -1,5 +1,5 @@
 
-import { useRef} from 'react'
+import { useRef , useEffect} from 'react'
 import './styles.css'
 import HomePage from './components/Pages/Home-Page/homePage'
 import { Header } from './components/Header/header';
