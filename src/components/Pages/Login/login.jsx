@@ -1,7 +1,12 @@
 import React from "react";
+import NetBackgrond from "../../Backgrond/backgrond";
 
 function Login() {
-  return <div>THIS IS THE ABOUT PAGE</div>;
+  return (
+    <NetBackgrond>
+      
+    </NetBackgrond>
+  );
 }
 
 export default Login;

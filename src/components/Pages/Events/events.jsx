@@ -1,7 +1,12 @@
 import React from "react";
+import NetBackgrond from './../../Backgrond/backgrond';
 
 function Events() {
-  return <div>THIS IS THE Event PAGE</div>;
+  return (
+    <NetBackgrond>
+
+    </NetBackgrond>
+  );
 }
 
 export default Events;
