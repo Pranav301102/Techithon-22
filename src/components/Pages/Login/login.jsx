@@ -101,7 +101,7 @@ const WelcomeText = styled.h2`
 `;
 
 const InputContainer = styled.div`
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;

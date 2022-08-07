@@ -1,6 +1,4 @@
-.background-page {
-    /* background-color: aqua; */
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    width: 100vw;
+.background-page{
+    height: 100vh ;
   }
+  

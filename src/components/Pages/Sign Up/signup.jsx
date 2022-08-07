@@ -5,6 +5,7 @@ import Button from "./ButtonSignUp";
 import Icon from "./IconSignUp";
 import Input from "./InputSignUp";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+
 function signup() {
   const FacebookBackground =
     "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
@@ -53,8 +54,7 @@ const MainContainer = styled.div`
   height: 80vh;
   width: 30vw;
   position: absolute;   
-  top: 10%;
-  left: 34%;
+  
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
@@ -66,6 +66,8 @@ const MainContainer = styled.div`
   @media only screen and (max-width: 320px) {
     width: 80vw;
     height: 90vh;
+    top: 10%;
+    left: 2%;
     hr {
       margin-bottom: 0.3rem;
     }
@@ -76,6 +78,9 @@ const MainContainer = styled.div`
   @media only screen and (min-width: 360px) {
     width: 80vw;
     height: 90vh;
+    top: 10%;
+    left: 10%;
+  
     h4 {
       font-size: small;
     }
@@ -83,18 +88,26 @@ const MainContainer = styled.div`
   @media only screen and (min-width: 411px) {
     width: 80vw;
     height: 90vh;
+    top: 10%;
+    left: 10%;
   }
   @media only screen and (min-width: 768px) {
     width: 80vw;
     height: 80vh;
+    top: 10%;
+    left: 10%;
   }
   @media only screen and (min-width: 1024px) {
     width: 70vw;
     height: 50vh;
+    top: 10%;
+    left: 24%;  
   }
   @media only screen and (min-width: 1280px) {
     width: 30vw;
     height: 80vh;
+    top: 10%;
+    left: 34%;
   }
 `;
 
@@ -107,7 +120,7 @@ const InputContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 20%;
+  height: 40%;
   width: 100%;
 
 `;
