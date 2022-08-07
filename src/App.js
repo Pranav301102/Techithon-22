@@ -11,7 +11,7 @@ import {
 import About from './components/Pages/About/about';
 import Login from './components/Pages/Login/login';
 import Events from './components/Pages/Events/events';
-
+import SignUp from './components/Pages/Sign Up/signup'
 
 window.mobileCheck = function () {
 	let isMobile = false;
@@ -35,7 +35,7 @@ export default function App() {
         element = {
         <HomePage overlay = {overlay} caption = {caption} scroll = {scroll} isMobile = {isMobile}/>}/>
         <Route exact path="/about" element = {<About/>}/>
-        <Route exact path="/login" element = {<Login/>}/>
+        <Route exact path="/login" element = {<SignUp/>}/>
         <Route exact path="/events" element = {<Events/>}/>
     </Routes>
     </Router>
