@@ -4,6 +4,9 @@ body {
 	
 }
 
+.backgroound-page{
+	height: 10;
+}
 
 section::before {
 	content: '';
