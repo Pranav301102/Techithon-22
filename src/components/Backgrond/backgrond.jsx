@@ -60,7 +60,7 @@ export default function Backgrond(props) {
 	return (
     <Canvas className="background-page" orthographic camera={{ zoom: 20 }} colorManagement={false}>
       <color attach="background" args={['black']} />
-      {/* <Effects /> */}
+      <Effects />
       <Dots duration={4.9} />
       <Html  position={[-15,18,0]}>
       <div>{props.children}</div>
