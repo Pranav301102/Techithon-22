@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import NetBackgrond from "../../Backgrond/backgrond";
+import Backgrond from "../../Backgrond/backgrond";
 import Button from "./ButtonSignUp";
 import Icon from "./IconSignUp";
 import Input from "./InputSignUp";
@@ -14,7 +14,7 @@ function signup() {
   const TwitterBackground =
     "linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)";
   return (
-    <NetBackgrond>
+    <Backgrond>
       <MainContainer>
         <WelcomeText>Welcome</WelcomeText>
         <InputContainer>
@@ -39,9 +39,9 @@ function signup() {
             <FaTwitter />
           </Icon>
         </IconsContainer>
-        {/* <ForgotPassword>Forgot Password ?</ForgotPassword> */}
+       {/* <ForgotPassword>Forgot Password ?</ForgotPassword> */}
       </MainContainer>
-    </NetBackgrond>
+    </Backgrond>
   );
 }
 

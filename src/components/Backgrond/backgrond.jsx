@@ -1,52 +1,71 @@
-import React, { useState, useRef, useEffect,  } from "react";
-import NET from "vanta/dist/vanta.net.min";
 import "./background.css";
+import React, { useLayoutEffect, useMemo, useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { Html } from "@react-three/drei";
+import { Effects } from './Effects'
+import * as THREE from 'three'
 
 
 
-export default function NetBackgrond({children}) {
-	const [vantaEffect, setVantaEffect] = useState(0);
-	const myRef = useRef(null);
 
-  useEffect(() => {
-    const threeScript = document.createElement("script");
-    threeScript.setAttribute("id", "threeScript");
-    threeScript.setAttribute(
-      "src",
-      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-    );
-    document.getElementsByTagName("head")[0].appendChild(threeScript);
-    return () => {
-      if (threeScript) {
-        threeScript.remove();
-      }
-    };
-  }, []);
+const roundedSquareWave = (t, delta = 0.1, a = 1, f = 1 / 10) => {
+  return ((2 * a) / Math.PI) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta)
+}
 
-useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        NET({
-        el: myRef.current,
-        color: 0x14b679,
-        backgroundColor: 0x15173c,
-        minHeight: 200.0,
-		    minWidth: 200.0,
-		    scale: 1.0,
-		    scaleMobile: 1.0,
-        })
-      );
-      console.log(vantaEffect);
+function Dots({ duration, ...props }) {
+  const ref = useRef()
+  const { positions, distances, transform, vec } = useMemo(() => {
+    const positions = [...Array(10000)].map(() => new THREE.Vector3())
+    const distances = [...Array(10000)]
+    const transform = new THREE.Matrix4()
+    const vec = new THREE.Vector3() // reusable
+    return { positions, distances, transform, vec }
+  }, [])
+  useLayoutEffect(() => {
+    const randomAmount = 0.3
+    const origin = new THREE.Vector3(0, 0, 0)
+    const right = new THREE.Vector3(1, 0, 0)
+    for (let i = 0; i < 10000; ++i) {
+      positions[i].set(Math.floor(i / 100) - 50 + (i % 2) * 0.5, (i % 100) - 50, 0)
+      positions[i].x += (Math.random() - 0.5) * randomAmount
+      positions[i].y += (Math.random() - 0.5) * randomAmount
+      distances[i] = positions[i].distanceTo(origin) + Math.cos(positions[i].angleTo(right) * 8) * 0.5
+      transform.setPosition(positions[i])
+      ref.current.setMatrixAt(i, transform)
     }
-    return () => {
-      if (vantaEffect) 
-      {vantaEffect.destroy()
-        console.log("instance distroyed")
-      }
-    };
-  }, [vantaEffect]);
+  }, [])
+  useFrame(({ clock }) => {
+    let dist, t, position, wave
+    for (let i = 0; i < 10000; ++i) {
+      position = positions[i]
+      dist = distances[i]
+      t = clock.elapsedTime - dist / 25 // wave is offset away from center
+      wave = roundedSquareWave(t, 0.15 + (0.2 * dist) / 72, 0.4, 1 / duration)
+      vec.copy(position).multiplyScalar(wave + 1.3)
+      transform.setPosition(vec)
+      ref.current.setMatrixAt(i, transform)
+    }
+    ref.current.instanceMatrix.needsUpdate = true
+  })
+  return (
+    <instancedMesh args={[null, null, 10000]} ref={ref} {...props}>
+      <circleBufferGeometry args={[0.15, 8]} />
+      <meshBasicMaterial color={'white'} />
+    </instancedMesh>
+  )
+}
 
+
+export default function Backgrond(props) {
 	return (
-		<div className="background-page" ref={myRef}>{children}</div>
-	);
+    <Canvas className="background-page" orthographic camera={{ zoom: 20 }} colorManagement={false}>
+      <color attach="background" args={['black']} />
+      {/* <Effects /> */}
+      <Dots duration={4.9} />
+      <Html  position={[-15,18,0]}>
+      <div>{props.children}</div>
+      </Html>
+    </Canvas>
+  )
+	
 }

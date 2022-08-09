@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import NetBackgrond from "../../Backgrond/backgrond";
+import Backgrond from "../../Backgrond/backgrond";
 import Button from "./Button";
 import Icon from "./Icon";
 import Input from "./Input";
@@ -13,7 +13,7 @@ function Login() {
   const TwitterBackground =
     "linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)";
   return (
-    <NetBackgrond>
+    <Backgrond>
       <MainContainer>
         <WelcomeText>Welcome</WelcomeText>
         <InputContainer>
@@ -38,7 +38,7 @@ function Login() {
         </IconsContainer>
         <ForgotPassword>Forgot Password ?</ForgotPassword>
       </MainContainer>
-    </NetBackgrond>
+    </Backgrond>
   );
 }
 

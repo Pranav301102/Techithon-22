@@ -1,11 +1,10 @@
 import React from "react";
-import NetBackgrond from './../../Backgrond/backgrond';
+import Backgrond from './../../Backgrond/backgrond';
+
 
 function Events() {
   return (
-    <NetBackgrond>
-
-    </NetBackgrond>
+    <Backgrond />
   );
 }
 
