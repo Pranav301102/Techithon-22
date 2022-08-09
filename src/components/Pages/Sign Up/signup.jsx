@@ -54,7 +54,7 @@ const MainContainer = styled.div`
   height: 80vh;
   width: 30vw;
   position: absolute;   
-  
+  z-index: 50;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
@@ -79,8 +79,7 @@ const MainContainer = styled.div`
     width: 80vw;
     height: 90vh;
     top: 10%;
-    left: 10%;
-  
+    
     h4 {
       font-size: small;
     }
@@ -89,26 +88,28 @@ const MainContainer = styled.div`
     width: 80vw;
     height: 90vh;
     top: 10%;
-    left: 10%;
+    left: 10%
   }
   @media only screen and (min-width: 768px) {
     width: 80vw;
     height: 80vh;
     top: 10%;
-    left: 10%;
+    left: 10%
   }
   @media only screen and (min-width: 1024px) {
     width: 70vw;
     height: 50vh;
     top: 10%;
-    left: 24%;  
+    left: 10%
   }
   @media only screen and (min-width: 1280px) {
     width: 30vw;
-    height: 80vh;
+    height: 85vh;
     top: 10%;
-    left: 34%;
+    left: 10%
   }
+
+
 `;
 
 const WelcomeText = styled.h2`

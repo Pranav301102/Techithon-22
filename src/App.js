@@ -26,20 +26,6 @@ export default function App() {
   const caption = useRef()
   const scroll = useRef(0)
   const isMobile = window.mobileCheck()
-  useEffect(() => {
-    const threeScript = document.createElement("script");
-    threeScript.setAttribute("id", "threeScript");
-    threeScript.setAttribute(
-      "src",
-      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-    );
-    document.getElementsByTagName("head")[0].appendChild(threeScript);
-    return () => {
-      if (threeScript) {
-        threeScript.remove();
-      }
-    };
-  }, []);
 
   return (
     <>
@@ -50,8 +36,9 @@ export default function App() {
         element = {
         <HomePage overlay = {overlay} caption = {caption} scroll = {scroll} isMobile = {isMobile}/>}/>
         <Route exact path="/about" element = {<About/>}/>
-        <Route exact path="/login" element = {<SignUp/>}/>
+        <Route exact path="/login" element = {<Login/>}/>
         <Route exact path="/events" element = {<Events/>}/>
+        <Route exact path="/signup" element = {<SignUp/>}/>
     </Routes>
     </Router>
     </>

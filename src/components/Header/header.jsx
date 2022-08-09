@@ -77,6 +77,14 @@ export function Header() {
                 Login
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to ="/signup"
+                className="nav-links"
+               onClick={click ? handleClick : null}
+              >
+                Signup
+              </Link>
+            </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fa fa-times" : "fa fa-bars"}></i>

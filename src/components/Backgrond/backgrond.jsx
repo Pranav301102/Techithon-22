@@ -1,11 +1,9 @@
 import "./background.css";
 import React, { useLayoutEffect, useMemo, useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, useFrame ,useThree} from '@react-three/fiber'
 import { Html } from "@react-three/drei";
 import { Effects } from './Effects'
 import * as THREE from 'three'
-
-
 
 
 const roundedSquareWave = (t, delta = 0.1, a = 1, f = 1 / 10) => {
@@ -55,6 +53,16 @@ function Dots({ duration, ...props }) {
   )
 }
 
+function HTMLContent(props){
+  const {width , height }  = useThree((state) => state.viewport)
+  console.log(width,height)
+  const w = width < 30 ? 0.4 : 0.16
+  
+  return(
+    <Html position={[-width * w,18,0]} zIndexRange={[40,0]}>{props.children}</Html>
+    );
+}
+
 
 export default function Backgrond(props) {
 	return (
@@ -62,9 +70,9 @@ export default function Backgrond(props) {
       <color attach="background" args={['black']} />
       <Effects />
       <Dots duration={4.9} />
-      <Html  position={[-15,18,0]}>
-      <div>{props.children}</div>
-      </Html>
+      <HTMLContent>
+      <div className="html-content">{props.children}</div>
+      </HTMLContent>
     </Canvas>
   )
 	
