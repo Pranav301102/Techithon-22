@@ -8,6 +8,21 @@ export default function NetBackgrond({children}) {
 	const [vantaEffect, setVantaEffect] = useState(0);
 	const myRef = useRef(null);
 
+  useEffect(() => {
+    const threeScript = document.createElement("script");
+    threeScript.setAttribute("id", "threeScript");
+    threeScript.setAttribute(
+      "src",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+    );
+    document.getElementsByTagName("head")[0].appendChild(threeScript);
+    return () => {
+      if (threeScript) {
+        threeScript.remove();
+      }
+    };
+  }, []);
+
 useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
@@ -19,9 +34,6 @@ useEffect(() => {
 		    minWidth: 200.0,
 		    scale: 1.0,
 		    scaleMobile: 1.0,
-		    points: 20.00,
-        maxDistance: 30.00,
-        spacing: 25.00
         })
       );
       console.log(vantaEffect);
