@@ -1,7 +1,7 @@
 @import url('https://rsms.me/inter/inter.css');
 
 :root {
-  --clr-neon: #ff2060;
+  --clr-neon: #08C2FC;
   --clr-bg: hsl(323 21% 16%);
 }
 
@@ -80,6 +80,7 @@ body {
   margin-bottom: 0.25em;
   text-align: center;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .dot > img{
@@ -90,8 +91,8 @@ body {
   text-align: center;
   display:block;
   margin:auto;
-  width: 40%;
-  height: 40%;
+  width: 80%;
+  height: 80%;
   
 }
 

@@ -10,8 +10,8 @@ import {
 } from "react-router-dom";
 import About from './components/Pages/About/about';
 import Login from './components/Pages/Login/login';
-import Events from './components/Pages/Events/events';
-import SignUp from './components/Pages/Sign Up/signup'
+import Events from './components/Pages/Events/EventPage';
+import SignUp from './components/Pages/Sign Up/signup';
 
 window.mobileCheck = function () {
 	let isMobile = false;
