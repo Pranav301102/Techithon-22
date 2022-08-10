@@ -9,7 +9,7 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .card:hover {
-  box-shadow: 0 8px 32px 0 rgb(31, 38, 135);
+  box-shadow: 0 8px 32px 0 #198fc1;
   backdrop-filter: blur(6px);
   transition: 300ms;
 }
@@ -50,13 +50,13 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white;
-  border-top: 1px solid rgb(117, 117, 255);
+  border-top: 1px solid #00ADB5;
   border-left: none;
   border-right: none;
   border-bottom: none;
 }
 .btn:hover {
-  background-color: rgb(94, 94, 253);
+  background-color: #00ADB5;
   border: none;
 }
 

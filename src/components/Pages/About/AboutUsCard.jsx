@@ -1,6 +1,6 @@
 import React from 'react'
 import "./about.css";
-function AboutUsCard() {
+function AboutUsCard(props) {
   return (
     <>
         <section>
@@ -8,18 +8,19 @@ function AboutUsCard() {
             <div class="card">
               <div class="content">
                 <div class="imgBx">
-                  <img src="https://image.flaticon.com/icons/png/256/4213/4213641.png" />
+                  <img src={props.img} alt="Zoro"/>
                 </div>
                 <div class="contentBx">
-                  <h3>Giraffe</h3>
+                  <h3>{props.name}</h3>
+                  <h2>{props.post}</h2>
                 </div>
               </div>
               <ul class="sci">
                 <li>
-                  <a href=""><button>Icon</button></a>
+                  <a href={props.instagram}><button>Icon</button></a>
                 </li>
                 <li>
-                  <a href=""><button>Icon</button></a>
+                  <a href={props.linkdin}><button>Icon</button></a>
                 </li>
                 <li>
                   <a href=""><button>Icon</button></a>

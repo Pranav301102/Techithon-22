@@ -1,7 +1,7 @@
 @import url('https://rsms.me/inter/inter.css');
 
 :root {
-  --clr-neon: #08C2FC;
+  --clr-neon: #00ADB5;
   --clr-bg: hsl(323 21% 16%);
 }
 
@@ -97,6 +97,7 @@ body {
 }
 
 .dot > .buttons {
+  display: inline-block;
   padding: 40px;
   -webkit-font-smoothing: auto;
   text-align: center;
@@ -165,10 +166,11 @@ body {
   border-bottom: 3px solid transparent;
 }
 
+
 .neon-button {
   font-size: 2rem;
   text-align: center;
-  display: block;
+  display: inline-block;
   cursor: pointer;
   color: var(--clr-neon);
   text-decoration: none;
@@ -178,7 +180,7 @@ body {
   border-radius: 0.25em;
   padding: 0.25em 1em;
   position: relative;
-  margin: 50px auto;
+  margin: 50px 30px;
   background: transparent;
 }
 

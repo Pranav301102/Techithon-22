@@ -38,16 +38,21 @@ export const EventCategory = styled.h1`
 
 `;
 
+const Page = styled.div`
+ background: #222831;
+`;
+
+
 export default function Events() {
   return (
-    <div>
+    <Page>
     <EventCategory>TechEvents</EventCategory>
     <TechCards />
     <EventCategory>Cultural Events</EventCategory>
     <CultureCards/>
     <EventCategory>Sports Events</EventCategory>
     <SportsCards/>
-    </div>
+    </Page>
   );
 }
 
