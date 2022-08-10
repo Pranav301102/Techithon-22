@@ -31,13 +31,24 @@ section::after {
 .container {
 	position: relative;
 	z-index: 1;
-	display: flex;
+	/* display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: wrap; */
 	margin: 40px 0;
 }
 
+
+.title{
+	border: 1px solid red;
+	display: inline-block;
+	margin-left: 670px;
+	color: white;
+}
+.ourTeamBlock{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
 .container .card {
 	position: relative;
 	width: 300px;
