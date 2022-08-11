@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import { Header } from "../../Header/header";
 import "./home.css";
 import { useFrame } from "@react-three/fiber";
-import EventCards from "../../Cards/EventCards";
+import EventCards, { Eventcarousel } from "../../Cards/EventCards";
 
 const Overlay = forwardRef(({ caption, scroll }, ref) => (
   <>
@@ -29,13 +29,13 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
       <div className="Event-cards">
         <div className="events">
           <h1 className="event-link">Your Events</h1>
-          {/* <EventCards/> */}
+          <Eventcarousel/>
         </div>
       </div>
       <div className="Event-cards">
         <div className="events">
           <h1 className="event-link">Events</h1>
-          <EventCards />
+          <Eventcarousel/>
         </div>
       </div>
       <div style={{ height: "50vh" }}>
