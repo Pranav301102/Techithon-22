@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './header.css'
+import "./header.css";
 
 // export function Header() {
 //   return (
@@ -25,7 +25,7 @@ import './header.css'
 //         </nav>
 //       </nav>
 //     </header>
-    
+
 //   );
 // }
 
@@ -34,19 +34,23 @@ export function Header() {
 
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
-  
+
   return (
     <div>
-     <div className={click ? "main-container" : ""}  onClick={()=>Close()} />
-      <nav className="navbar" onClick={e => e.stopPropagation()}>
+      <div className={click ? "main-container" : ""} onClick={() => Close()} />
+      <nav className="navbar" onClick={(e) => e.stopPropagation()}>
         <div className="nav-container">
-        <img src="IEEE_Atharva_logo_-removebg.png" alt="IEEE" height="50px" width="120px"></img>
-          <h1 className="nav-logo">
-             Techithon
-          </h1>
+          <img
+            src="IEEE_Atharva_logo_-removebg.png"
+            alt="IEEE"
+            height="50px"
+            width="120px"
+          ></img>
+          <h1 className="nav-logo">Techithon</h1>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to ="/"
+              <Link
+                to="/"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
@@ -54,7 +58,8 @@ export function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to ="/about"
+              <Link
+                to="/about"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
@@ -62,7 +67,8 @@ export function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to ="/events"
+              <Link
+                to="/events"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
@@ -70,17 +76,19 @@ export function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to ="/login"
+              <Link
+                to="/login"
                 className="nav-links"
-               onClick={click ? handleClick : null}
+                onClick={click ? handleClick : null}
               >
                 Login
               </Link>
             </li>
             <li className="nav-item">
-              <Link to ="/signup"
+              <Link
+                to="/signup"
                 className="nav-links"
-               onClick={click ? handleClick : null}
+                onClick={click ? handleClick : null}
               >
                 Signup
               </Link>

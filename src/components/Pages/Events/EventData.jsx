@@ -5,7 +5,7 @@ export const EventsData = [
     {
         id:1,
         category:"tech",
-        priority: false,
+        priority: true,
         name: "TechEvent",
         disc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tenetur dignissimos minus error laboriosam.",
         time:"3pm",
@@ -82,7 +82,7 @@ export const EventsData = [
     {
         id:8,
         category:"tech",
-        priority: false,
+        priority: true,
         name: "TechEvent",
         disc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tenetur dignissimos minus error laboriosam.",
         time:"3pm",
@@ -104,7 +104,7 @@ export const EventsData = [
     {
         id:10,
         category:"culture",
-        priority: false,
+        priority: true,
         name: "cultureEvent",
         disc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tenetur dignissimos minus error laboriosam.",
         time:"3pm",
@@ -115,7 +115,7 @@ export const EventsData = [
     {
         id:11,
         category:"culture",
-        priority: false,
+        priority: true,
         name: "cultureEvent",
         disc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tenetur dignissimos minus error laboriosam.",
         time:"3pm",
@@ -159,7 +159,7 @@ export const EventsData = [
     {
         id:15,
         category:"sports",
-        priority: false,
+        priority: true,
         name: "sportsEvent",
         disc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tenetur dignissimos minus error laboriosam.",
         time:"3pm",
