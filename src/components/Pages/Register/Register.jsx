@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Backgrond from "../../Backgrond/backgrond";
-import Button from "./ButtonSignUp";
-import Icon from "./IconSignUp";
-import Input from "./InputSignUp";
+// import Button from "./ButtonSignUp";
+// import Icon from "./IconSignUp";
+// import Input from "./InputSignUp";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-
+import Select from 'react-select';
+import '../About/about.css';
+import { EventsData } from "../Events/EventData";
 function signup() {
   const FacebookBackground =
     "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
@@ -13,22 +15,30 @@ function signup() {
     "linear-gradient(to right, #A12AC4 0%, #ED586C 40%, #F0A853 100%)";
   const TwitterBackground =
     "linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)";
+
+    const techCompanies = [
+     
+    ];
+    const data = EventsData.map(function(element){
+      return element.name
+    })
   return (
     <Backgrond>
-      <MainContainer>
+      {/* <MainContainer>
         <WelcomeText>Welcome</WelcomeText>
         <InputContainer>
           <Input type="text" placeholder="Email" />
           <Input type="text" placeholder="Name" />
           <Input type="text" placeholder="College" />
           <Input type="text" placeholder="Event Catogory" />
+          <Select options={techCompanies} />
           <Input type= "text" placeholder="Event" />
         </InputContainer>
         <ButtonContainer>
           <Button content="Register" />
         </ButtonContainer>
         <LoginWith>OR Sign Up WITH</LoginWith>
-        {/* <HorizontalRule />
+        <HorizontalRule />
         <IconsContainer>
           <Icon color={FacebookBackground}>
             <FaFacebookF />
@@ -40,8 +50,12 @@ function signup() {
             <FaTwitter />
           </Icon>
         </IconsContainer>
-       {/* <ForgotPassword>Forgot Password ?</ForgotPassword> 
-      </MainContainer> */}
+        <ForgotPassword>Forgot Password ?</ForgotPassword>
+      </MainContainer>  */}
+      <div className="select">
+        <Select options={data} />
+        
+      </div>
     </Backgrond>
   );
 }

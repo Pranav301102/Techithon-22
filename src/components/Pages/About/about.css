@@ -3,7 +3,10 @@ body {
 	background: #222831;
 	
 }
-
+.select{
+	margin-top: 100px;
+	width: 200px;
+}
 .about-ieee{
 	height:100vh;
 	background: #00ADB5;

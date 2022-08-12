@@ -12,7 +12,7 @@ import About from './components/Pages/About/about';
 import Login from './components/Pages/Login/login';
 import Events from './components/Pages/Events/EventPage';
 import SignUp from './components/Pages/Sign Up/signup';
-
+import Reg from './components/Pages/Register/Register';
 window.mobileCheck = function () {
 	let isMobile = false;
 	if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -35,7 +35,7 @@ export default function App() {
       <Route exact path="/" 
         element = {
         <HomePage overlay = {overlay} caption = {caption} scroll = {scroll} isMobile = {isMobile}/>}/>
-        <Route exact path="/about" element = {<About/>}/>
+        <Route exact path="/about" element = {<Reg/>}/>
         <Route exact path="/login" element = {<Login/>}/>
         <Route exact path="/events" element = {<Events/>}/>
         <Route exact path="/signup" element = {<SignUp/>}/>
