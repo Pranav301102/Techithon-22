@@ -39,9 +39,9 @@ function Rig({ children, scroll }) {
     // camera.position.set(Math.sin(offset) * -10, Math.atan(offset * Math.PI * 2) * 5, Math.cos((offset * Math.PI) / 3) * -10)
     camera.position.lerp(
       vec.set(
-        mouse.x * 0.5 + Math.sin(offset) * 5,
+        mouse.x * 0.5 - Math.sin(offset) * 5 + 2 ,
         Math.atan(offset * Math.PI * 2) * 1,
-        5 + Math.cos(offset / 3) * -2
+        7 + Math.cos(offset / 3) * -2
       ),
       0.05
     );
@@ -51,7 +51,7 @@ function Rig({ children, scroll }) {
       (-mouse.x * Math.PI) / 20,
       0.1
     );
-    camera.lookAt(vec.set(0, 0, 0));
+    camera.lookAt(vec.set(-3 + offset*5 , 0, 0));
   });
   return <group ref={ref}>{children}</group>;
 }
@@ -85,7 +85,7 @@ export function Model({ scroll }) {
         color="cyan"
         scale={0.009}
         position={[2, 0, -2]}
-        rotation={[0, 0, Math.PI / 3]}
+        rotation={[0, 0 , Math.PI / 3]}
       />
       <Triangle
         color="orange"
