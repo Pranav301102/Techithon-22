@@ -16,12 +16,9 @@ function signup() {
   const TwitterBackground =
     "linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)";
 
-    const techCompanies = [
-     
-    ];
-    const data = EventsData.map(function(element){
-      return element.name
-    })
+  const techCompanies = EventsData.map(function(element){
+    return {label: element.name, value: element.id}
+  })
   return (
     <Backgrond>
       {/* <MainContainer>
@@ -53,7 +50,7 @@ function signup() {
         <ForgotPassword>Forgot Password ?</ForgotPassword>
       </MainContainer>  */}
       <div className="select">
-        <Select options={data} />
+        <Select options={techCompanies} />
         
       </div>
     </Backgrond>

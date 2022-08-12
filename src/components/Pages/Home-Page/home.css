@@ -53,7 +53,7 @@ body {
 
 .dot {
   /* pointer-events: none; */
-  position: sticky;
+  position: flex;
   top: 0px;
   display: inline-block;
   width: 100%;
@@ -63,6 +63,7 @@ body {
   line-height: 1.6em;
   font-size: 15px;
   letter-spacing: 1.5px;
+  align-items: left;
 }
 
 .dot > h1 {
@@ -74,9 +75,10 @@ body {
   line-height: 1em;
   margin: 0;
   margin-bottom: 0.25em;
-  text-align: center;
+  text-align: left;
   justify-content: center;
   padding-top: 100px;
+  padding-left: 20px;
 }
 
 .dot > img {
@@ -84,11 +86,10 @@ body {
   pointer-events: none;
   margin: 0;
   margin-bottom: 0.25em;
-  text-align: center;
   display: block;
-  margin: auto;
-  width: 80%;
-  height: 80%;
+  margin: auto 0px;
+  width: 55%;
+  height: 55%;
 }
 
 .dot > .buttons {
@@ -170,7 +171,7 @@ body {
   border-radius: 0.25em;
   padding: 0.25em 1em;
   position: relative;
-  margin: 50px 30px;
+  margin: 100px 30px;
   background: transparent;
 }
 
