@@ -1,12 +1,16 @@
-@import url("https://rsms.me/inter/inter.css");
+/* @import url("https://rsms.me/inter/inter.css"); */
 
 :root {
   --clr-neon: #00adb5;
   --clr-bg: hsl(323 21% 16%);
 }
 
-* {
+*{
   box-sizing: border-box;
+}
+
+h1{
+  font-family: 'helvetica neue';
 }
 
 html,
@@ -46,7 +50,7 @@ body {
   overscroll-behavior-y: none;
   /* background-color: #101010;
   background: radial-gradient(circle at bottom center, #212121 0%, #101010 80%); */
-  font-family: "Inter var", sans-serif;
+  /* font-family: "Inter var", sans-serif; */
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
 }
@@ -98,8 +102,9 @@ body {
   -webkit-font-smoothing: auto;
   text-align: center;
   width: 100%;
-  max-width: 35vw;
+  max-width: 700px;
   margin: 0% auto;
+
 }
 
 #container {
@@ -174,6 +179,7 @@ body {
   position: relative;
   margin: 100px 30px;
   background: transparent;
+
 }
 
 .neon-button::before,
@@ -253,5 +259,9 @@ body {
   }
   .dot > h1 {
     font-size: 2em;
+  }
+  .neon-button {
+    margin: 50px 30px;
+
   }
 }

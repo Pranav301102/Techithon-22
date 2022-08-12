@@ -92,6 +92,15 @@
   }
   
 }
+@media only screen and (min-height: 500px) and (max-height: 800px) {
+  .card {
+    max-height: 80vh;
+  }
+  .swiper{
+    min-height: 70vh;
+  }
+  
+}
 
 .swiper-slide {
   display: -webkit-box;

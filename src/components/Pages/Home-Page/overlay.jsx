@@ -21,8 +21,8 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
           {/* <h1> fest theme</h1> */}
           <img src="logo.png" alt="carnivel"></img>
           <div className="buttons">
-            <button className="neon-button">Signup</button>
-            <button className="neon-button">Sign In</button>
+            <button className="neon-button">SignUp</button>
+            <button className="neon-button">SignIn</button>
           </div>
         </div>
       </div>
