@@ -31,7 +31,7 @@ export const CardGrid = styled.div`
   grid-template-columns: auto auto auto auto;
   column-gap: 60px;
   row-gap: 140px;
-  margin-left: 100px;
+  margin-left: 30px;
   margin-top: 10px;
   z-index: 50;
   /* height: 50vh; */

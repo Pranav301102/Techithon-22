@@ -35,7 +35,7 @@ export default function App() {
       <Route exact path="/" 
         element = {
         <HomePage overlay = {overlay} caption = {caption} scroll = {scroll} isMobile = {isMobile}/>}/>
-        <Route exact path="/about" element = {<Reg/>}/>
+        <Route exact path="/about" element = {<About/>}/>
         <Route exact path="/login" element = {<Login/>}/>
         <Route exact path="/events" element = {<Events/>}/>
         <Route exact path="/signup" element = {<SignUp/>}/>

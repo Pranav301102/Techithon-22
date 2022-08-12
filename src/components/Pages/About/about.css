@@ -4,12 +4,19 @@ body {
 	
 }
 .select{
-	margin-top: 100px;
-	width: 200px;
+	/* background-color: blue;
+	color: black;
+	width: 300px;
+	border-radius: 20px; */
+	color: black;
+	/* background-color: blue; */
+	box-shadow: 0 8px 32px 0 rgba(0,173,181, 0.17);
+	border-radius: 2rem;
+	width: 340px;
 }
 .about-ieee{
 	height:100vh;
-	background: #00ADB5;
+	/* background: #00ADB5; */
 }
 
 .backgroound-page{
@@ -61,8 +68,8 @@ section::after {
 	position: relative;
 	width: 300px;
 	height: 400px;
-	/* background: rgba(37, 122, 250, 0.05); */
-	background: #00ADB5;
+	background: rgba(37, 122, 250, 0.05);
+	/* background: #00ADB5; */
 	margin: 20px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 	border-radius: 15px;
