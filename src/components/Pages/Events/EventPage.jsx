@@ -2,7 +2,12 @@ import React from "react";
 import {TechCards ,SportsCards,CultureCards} from "./Events";
 import styled from 'styled-components';
 import Backgrond from "../../Backgrond/backgrond";
-
+import SideBar from './SideBar';
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 export const EventCategory = styled.h1`
   display:block;
   line-height: 40px;
@@ -11,7 +16,7 @@ export const EventCategory = styled.h1`
   color: #fff;
   text-decoration: none;
   padding-top: 120px ;
-  padding-left:3vw ;
+  padding-left:7vw ;
   height: 100%;
   border-bottom: 3px solid transparent;
 
@@ -44,8 +49,18 @@ const Page = styled.div`
 
 
 export default function Events() {
+  // const [searchNote,setsearchNote] = useState('');
   return (
+    <>
+    
     <Page>
+    {/* <div className="nav">
+      <div className="options">
+        
+      </div>
+    </div> */}
+    <div className="menu"><SideBar/></div>
+    
     <EventCategory>TechEvents</EventCategory>
     <TechCards />
     <EventCategory>Cultural Events</EventCategory>
@@ -53,6 +68,7 @@ export default function Events() {
     <EventCategory>Sports Events</EventCategory>
     <SportsCards/>
     </Page>
+    </>
   );
 }
 

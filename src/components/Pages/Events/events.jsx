@@ -2,6 +2,7 @@ import Card from "../../Cards/Card";
 import { EventsData } from "./EventData";
 import styled from "styled-components";
 
+
 const TechEvents = EventsData.filter(
   (EventsData) => EventsData.category === "tech"
 );
@@ -12,26 +13,31 @@ const CulturalEvents = EventsData.filter(
   (EventsData) => EventsData.category === "culture"
 );
 
+
 export function CreateCard(Events) {
   return (
-    <Card
-      name={Events.name}
-      disc={Events.disc}
-      key={Events.id}
-      time={Events.time}
-      date={Events.date}
-      venue={Events.venue}
-      reg={Events.reg}
-    />
+
+    <>
+     
+      <Card
+        name={Events.name}
+        disc={Events.disc}
+        key={Events.id}
+        time={Events.time}
+        date={Events.date}
+        venue={Events.venue}
+        reg={Events.reg}
+      />
+    </>
   );
 }
 
 export const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto ;
   column-gap: 60px;
   row-gap: 140px;
-  margin-left: 30px;
+  margin-left: 100px;
   margin-top: 10px;
   z-index: 50;
   /* height: 50vh; */

@@ -28,6 +28,7 @@ export default function EventCards() {
 
 function NumCard() {
   const [windowDimensions, setWindowDimensions] = useState(window.innerWidth);
+  
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(window.innerWidth);
@@ -40,8 +41,10 @@ function NumCard() {
 }
 
 export function Eventcarousel() {
+  
   return (
     <>
+       
       <Swiper
         slidesPerView={NumCard()}
         spaceBetween={30}
