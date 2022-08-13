@@ -38,9 +38,11 @@ body,
   padding: 0;
   /* user-select: none; */
   overflow: hidden;
-  -webkit-overflow-scrolling:touch
-  
+  -webkit-overflow-scrolling:touch;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
 
 #root {
   overflow: auto;
@@ -98,8 +100,8 @@ body {
   margin-bottom: 0.25em;
   text-align: center;
   justify-content: center;
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
 }
-
 .dot > img{
   -webkit-font-smoothing: auto;
   pointer-events: none;
@@ -180,6 +182,7 @@ body {
   padding: 0.5rem 5.5rem;
   height: 100%;
   border-bottom: 3px solid transparent;
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
 }
 
 .neon-button {

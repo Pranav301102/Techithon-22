@@ -18,7 +18,7 @@ export function CreateCard(Events) {
   return (
 
     <>
-     
+    
       <Card
         name={Events.name}
         disc={Events.disc}

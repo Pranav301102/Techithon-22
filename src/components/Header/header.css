@@ -55,6 +55,7 @@
   z-index: 80;
   position: absolute;
   width: 100%;
+ 
 }
 
 .nav-container {
@@ -66,6 +67,10 @@
   padding-left: 30px;
   z-index: 80;
   /* max-width: 1500px; */
+}
+
+.nav-container h1{
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
 }
 
 .main-container {
