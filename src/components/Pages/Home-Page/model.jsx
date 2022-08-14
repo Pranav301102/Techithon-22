@@ -33,7 +33,6 @@ function Rig({ children, scroll }) {
   const ref = useRef();
   const vec = new THREE.Vector3();
   const { mouse, camera } = useThree();
-
   useFrame(() => {
     const offset = scroll.current;
     // camera.position.set(Math.sin(offset) * -10, Math.atan(offset * Math.PI * 2) * 5, Math.cos((offset * Math.PI) / 3) * -10)

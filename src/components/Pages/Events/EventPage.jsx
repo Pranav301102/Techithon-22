@@ -52,20 +52,13 @@ export default function Events() {
   // const [searchNote,setsearchNote] = useState('');
   return (
     <>
-    
     <Page>
-    {/* <div className="nav">
-      <div className="options">
-        
-      </div>
-    </div> */}
     <div className="menu"><SideBar/></div>
-    
-    <EventCategory>TechEvents</EventCategory>
+    <EventCategory id="TechEvents">Tech Events</EventCategory>
     <TechCards />
-    <EventCategory>Cultural Events</EventCategory>
+    <EventCategory id="CulturalEvents">Cultural Events</EventCategory>
     <CultureCards/>
-    <EventCategory>Sports Events</EventCategory>
+    <EventCategory id="SportsEvents">Sports Events</EventCategory>
     <SportsCards/>
     </Page>
     </>

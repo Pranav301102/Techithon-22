@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
+import Register from './../Pages/Register/Register';
 
 // export function Header() {
 //   return (
@@ -82,6 +83,15 @@ export function Header() {
                 onClick={click ? handleClick : null}
               >
                 Login
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/reg"
+                className="nav-links"
+                onClick={click ? handleClick : null}
+              >
+                Register
               </Link>
             </li>
             <li className="nav-item">

@@ -2,6 +2,7 @@ import React from 'react'
 import '../Cards/Cards.css';
 import Tilt from 'react-vanilla-tilt';
 
+
 function Card(props) {
   return (
     <>
@@ -16,12 +17,12 @@ function Card(props) {
         <button className='btn' >Register</button>
       </div> */}
       <Tilt options={{scale: 2, max: 25}}  style={{ height: 300, width: 300 }}>
-      <div className="card">
+      <div className="card" id={props.idname}>
         <h2>{props.name}</h2>
         <div className="disc"><p>{props.disc}</p>
         <h3>Time: {props.time}</h3>
         <h3>Date: {props.date}</h3>
-        <h3>Venu: {props.venue}</h3>
+        <h3>Venue: {props.venue}</h3>
         <h3>Registration: {props.reg}</h3>
         </div>
         <button className='btn' >Register</button>

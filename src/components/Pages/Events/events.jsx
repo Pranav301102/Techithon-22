@@ -3,13 +3,13 @@ import { EventsData } from "./EventData";
 import styled from "styled-components";
 
 
-const TechEvents = EventsData.filter(
+export const TechEvents = EventsData.filter(
   (EventsData) => EventsData.category === "tech"
 );
-const SportsEvents = EventsData.filter(
+export const SportsEvents = EventsData.filter(
   (EventsData) => EventsData.category === "sports"
 );
-const CulturalEvents = EventsData.filter(
+export const CulturalEvents = EventsData.filter(
   (EventsData) => EventsData.category === "culture"
 );
 
@@ -34,7 +34,7 @@ export function CreateCard(Events) {
 
 export const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto ;
+  grid-template-columns: auto auto auto auto;
   column-gap: 60px;
   row-gap: 140px;
   margin-left: 100px;

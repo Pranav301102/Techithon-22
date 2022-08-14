@@ -4,6 +4,8 @@
 export const EventsData = [
     {
         id:1,
+        link:"#techevent1",
+        idname:"techevent1",
         category:"tech",
         priority: true,
         name: "TechEvent",
@@ -11,10 +13,13 @@ export const EventsData = [
         time:"3pm",
         date:"10-10-22",
         venue:"",
-        reg:"Rs 50"
+        reg:"Rs 50",
+        value:50
     },
     {
         id:2,
+        link:"#techevent2",
+        idname:"techevent2",
         category:"tech",
         priority: false,
         name: "TechEvent",
@@ -22,10 +27,13 @@ export const EventsData = [
         time:"3pm",
         date:"10-10-22",
         venue:"",
-        reg:"Rs 50"
+        reg:"Rs 50",
+        value:50
     },
     {
         id:3,
+        link:"#techevent3",
+        idname:"techevent3",
         category:"tech",
         priority: false,
         name: "TechEvent",
@@ -33,10 +41,13 @@ export const EventsData = [
         time:"3pm",
         date:"10-10-22",
         venue:"",
-        reg:"Rs 50"
+        reg:"Rs 50",
+        value:50
     },
     {
         id:4,
+        link:"#techevent4",
+        idname:"techevent4",
         category:"tech",
         priority: false,
         name: "TechEvent",
@@ -44,10 +55,13 @@ export const EventsData = [
         time:"3pm",
         date:"10-10-22",
         venue:"",
-        reg:"Rs 50"
+        reg:"Rs 50",
+        value:50
     },
     {
         id:5,
+        link:"#techevent5",
+        idname:"techevent5",
         category:"tech",
         priority: false,
         name: "TechEvent",
@@ -55,10 +69,13 @@ export const EventsData = [
         time:"3pm",
         date:"10-10-22",
         venue:"",
-        reg:"Rs 50"
+        reg:"Rs 50",
+        value:50
     },
     {
         id:6,
+        link:"#techevent6",
+        idname:"techevent6",
         category:"tech",
         priority: false,
         name: "TechEvent",
@@ -70,6 +87,8 @@ export const EventsData = [
     },
     {
         id:7,
+        link:"#techevent7",
+        idname:"techevent7",
         category:"tech",
         priority: false,
         name: "TechEvent",
@@ -81,6 +100,8 @@ export const EventsData = [
     },
     {
         id:8,
+        link:"#techevent8",
+        idname:"techevent8",
         category:"tech",
         priority: true,
         name: "TechEvent",
@@ -92,6 +113,8 @@ export const EventsData = [
     },
     {
         id:9,
+        link:"#techevent9",
+        idname:"techevent9",
         category:"tech",
         priority: false,
         name: "TechEvent",
@@ -103,9 +126,11 @@ export const EventsData = [
     },
     {
         id:10,
+        link:"#culturevent10",
+        idname:"culturevent10",
         category:"culture",
         priority: true,
-        name: "cultureEvent",
+        name: "Hello World",
         disc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tenetur dignissimos minus error laboriosam.",
         time:"3pm",
         date:"10-10-22",
@@ -114,6 +139,8 @@ export const EventsData = [
     },
     {
         id:11,
+        link:"#culturevent11",
+        idname:"culturevent11",
         category:"culture",
         priority: true,
         name: "cultureEvent",

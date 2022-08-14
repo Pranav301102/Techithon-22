@@ -1,13 +1,19 @@
 import './SideNavBar.css'
 import React from 'react'
 import styled from 'styled-components';
+import { EventsData } from './EventData';
+import { useState } from 'react';
+import { TechEvents, CulturalEvents, SportsEvents} from './Events';
+
+
 const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: #EFFFFA;
+  justify-content: top;
+  background-color: #393e46;
+  opacity: 0.8;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-  height: 700px;
+  height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -15,9 +21,11 @@ const StyledMenu = styled.nav`
   left: 0;
   z-index: 20;
   transition: transform 0.3s ease-in-out;
-
+  min-width: 20vw;
+  
   @media (max-width: 576px) {
-      width: 100%;
+      min-width: 100vw;
+      /* width: 100%; */
     }
 
   a {
@@ -25,8 +33,8 @@ const StyledMenu = styled.nav`
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #0D0C1D;
+    letter-spacing: 0.2rem;
+    color: #EFFFFA;
     text-decoration: none;
     transition: color 0.3s linear;
     
@@ -36,7 +44,7 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: #343078;
+      color: #0095B7;
     }
   }
 `
@@ -44,19 +52,44 @@ const StyledMenu = styled.nav`
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href="/">
-       
+      <Dropdown data={TechEvents} link={"#TechEvents"} category={"Tech Events"}/>
+      <a href="#TechEvents">
         Tech Events
       </a>
-      <a href="/">
-       
+      <a href="#CulturalEvents">
       Cultural Events
         </a>
-      <a href="/">
-        
+      <a href="#SportsEvents">
       Sports Events
         </a>
     </StyledMenu>
+  )
+}
+
+const Dropdown = (props) => {
+  const [isOpen, setOpen] = useState(false);
+  const toggleDropdown = () => setOpen(!isOpen);
+  const items = props.data.map(function (element) {
+    return { label: element.name, id: element.id ,link: element.link}
+  })
+  return (
+    <div className='dropdown'>
+      <div className='dropdown-header' onClick={toggleDropdown}>
+      <a href={props.link}>
+        {props.category}
+      </a>
+        <i className={`fa fa-chevron-right icon ${isOpen && "open"}`}></i>
+      </div>
+      <div className={`dropdown-body ${isOpen && 'open'}`}>
+        {items.map(item => (
+          <div className="dropdown-item" >
+          <a href={item.link}>
+          {item.label}
+          </a>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
 
