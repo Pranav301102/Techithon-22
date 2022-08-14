@@ -8,12 +8,16 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Select from 'react-select';
 import '../About/about.css';
 import { EventsData } from "../Events/EventData";
+import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 
 export default function Register() {
   const techCompanies = EventsData.map(function (element) {
     return { label: element.name, value: element.id }
   })
-  
+  const styles = {
+      color: 'grey',
+      
+  }
   return (
     <Backgrond>
       <MainContainer>
@@ -22,7 +26,7 @@ export default function Register() {
           <Input type="text" placeholder="Email" />
           <Input type="text" placeholder="Name" />
           <Input type="text" placeholder="Phone Number" />
-          <Select className="select" options={techCompanies} />
+          <Select styles={styles} options={techCompanies} />
           
         </InputContainer>
         <h2>Entry Fees: {}</h2>

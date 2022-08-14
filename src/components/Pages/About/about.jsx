@@ -60,9 +60,9 @@ export default function About() {
       <div className="gridDisplay">
             <h1 className='title' >Our Team</h1>
             <TopCards/>
-            <h1 className='title' >Heads</h1>
+            <h1 className='head' >Heads</h1>
             <HeadCards/>
-            <h1 className='title' >Assitant Heads</h1>
+            <h1 className='ah' >Assitant Heads</h1>
             <AssitCards/>
         </div>
     </>

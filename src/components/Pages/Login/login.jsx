@@ -52,7 +52,7 @@ const MainContainer = styled.div`
   width: 30vw;
   position: absolute;   
   
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(34,40,49, 0.45);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
