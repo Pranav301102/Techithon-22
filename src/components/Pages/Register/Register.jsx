@@ -9,15 +9,51 @@ import Select from 'react-select';
 import '../About/about.css';
 import { EventsData } from "../Events/EventData";
 import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
-
+// import DD from './DropDownMenu';
 export default function Register() {
   const techCompanies = EventsData.map(function (element) {
     return { label: element.name, value: element.id }
   })
-  const styles = {
-      color: 'grey',
-      
-  }
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: "#787878",
+      // background: rgba(34,40,49, 0.45),
+      // color: 'black',
+      // match with the menu
+      width: '350px',
+      height: '50px',
+      // color: '#ffffff',
+      // background: 'tranparent',
+      borderRadius: '12px',
+      // Overwrittes the different states of border
+      // borderColor: state.isFocused ? "yellow" : "green",
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      "&:hover": {
+        
+        borderColor: state.isFocused ? "none" : "none"
+      }
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      borderBottom: '1px dotted pink',
+      color: state.isSelected ? 'black': 'black' ,
+      padding: 20,
+    }),
+    menu: base => ({
+      ...base,
+      // override border radius to match the box
+      borderRadius: 0,
+      // kill the gap
+      marginTop: 0
+    }),
+    menuList: base => ({
+      ...base,
+      // kill the white space on first and last option
+      padding: 0
+    })
+  };
   return (
     <Backgrond>
       <MainContainer>
@@ -26,10 +62,10 @@ export default function Register() {
           <Input type="text" placeholder="Email" />
           <Input type="text" placeholder="Name" />
           <Input type="text" placeholder="Phone Number" />
-          <Select styles={styles} options={techCompanies} />
-          
+          <Select styles={customStyles} options={techCompanies} />
+          {/* <DD/> */}
         </InputContainer>
-        <h2>Entry Fees: {}</h2>
+        {/* <h2 class >Entry Fees: {}</h2> */}
         <ButtonContainer>
           <Button content="Register" />
         </ButtonContainer>
@@ -61,7 +97,6 @@ const MainContainer = styled.div`
   flex-direction: column;
   margin-top: 55px;
   height: 80vh;
-  
   width: 30vw;
   position: absolute;   
   z-index: 50;
@@ -139,7 +174,7 @@ const InputContainer = styled.div`
 const ButtonContainer = styled.div`
   margin: 1rem 0 2rem 0;
   width: 100%;
-  /* margin-top: 50px;   */
+  margin-top: 140px;  
   display: flex;
   align-items: center;
   justify-content: center;
