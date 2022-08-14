@@ -17,7 +17,7 @@ function Card(props) {
         <button className='btn' >Register</button>
       </div> */}
       <Tilt options={{scale: 2, max: 25}}  style={{ height: 300, width: 300 }}>
-      <div className="card" id={props.idname}>
+      <div className="card" id={props.name} name={props.name}> 
         <h2>{props.name}</h2>
         <div className="disc"><p>{props.disc}</p>
         <h3>Time: {props.time}</h3>
