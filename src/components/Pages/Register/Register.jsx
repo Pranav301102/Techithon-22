@@ -198,7 +198,7 @@ const HorizontalRule = styled.hr`
 
 const IconsContainer = styled.div`
   display: flex;
-  // margin-top: -50px;
+  margin-top: -50px;
   justify-content: space-evenly;
   margin: 2rem 0 3rem 0;
   width: 80%; 

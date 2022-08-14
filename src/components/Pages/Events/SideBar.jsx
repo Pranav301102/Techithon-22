@@ -4,7 +4,23 @@ import styled from 'styled-components';
 import { EventsData } from './EventData';
 import { useState } from 'react';
 import { TechEvents, CulturalEvents, SportsEvents} from './Events';
+import { Scrollbars } from 'react-custom-scrollbars';
 
+const renderThumb = ({ style, ...props }) => {
+  const thumbStyle = {
+    borderRadius: 6,
+    backgroundColor: 'rgba(0, 0, 0, 0.8)'
+  };
+  return <div style={{ ...style, ...thumbStyle }} {...props} />;
+};
+
+const CustomScrollbars = props => (
+  <Scrollbars
+    renderThumbHorizontal={renderThumb}
+    renderThumbVertical={renderThumb}
+    {...props}
+  />
+);
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -22,6 +38,7 @@ const StyledMenu = styled.nav`
   z-index: 20;
   transition: transform 0.3s ease-in-out;
   min-width: 20vw;
+  overflow-y: auto ;
   
   @media (max-width: 576px) {
       min-width: 100vw;
@@ -52,16 +69,11 @@ const StyledMenu = styled.nav`
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
+      <CustomScrollbars>
       <Dropdown data={TechEvents} link={"#TechEvents"} category={"Tech Events"}/>
-      <a href="#TechEvents">
-        Tech Events
-      </a>
-      <a href="#CulturalEvents">
-      Cultural Events
-        </a>
-      <a href="#SportsEvents">
-      Sports Events
-        </a>
+      <Dropdown data={CulturalEvents} link={"#CulturalEvents"} category={"Cultural Events"}/>
+      <Dropdown data={SportsEvents} link={"#SportsEvents"} category={"Sports Events"}/>
+      </CustomScrollbars>
     </StyledMenu>
   )
 }
@@ -69,9 +81,7 @@ const Menu = ({ open }) => {
 const Dropdown = (props) => {
   const [isOpen, setOpen] = useState(false);
   const toggleDropdown = () => setOpen(!isOpen);
-  const items = props.data.map(function (element) {
-    return { label: element.name, id: element.id ,link: element.link}
-  })
+  const items = props.data
   return (
     <div className='dropdown'>
       <div className='dropdown-header' onClick={toggleDropdown}>
@@ -84,7 +94,7 @@ const Dropdown = (props) => {
         {items.map(item => (
           <div className="dropdown-item" >
           <a href={item.link}>
-          {item.label}
+          {item.name}
           </a>
           </div>
         ))}
