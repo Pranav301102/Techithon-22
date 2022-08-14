@@ -17,7 +17,7 @@ export default function Register() {
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      background: "#787878",
+      background: "#ffffff",
       // background: rgba(34,40,49, 0.45),
       // color: 'black',
       // match with the menu
@@ -174,7 +174,7 @@ const InputContainer = styled.div`
 const ButtonContainer = styled.div`
   margin: 1rem 0 2rem 0;
   width: 100%;
-  margin-top: 140px;  
+  margin-top: 60px;  
   display: flex;
   align-items: center;
   justify-content: center;
