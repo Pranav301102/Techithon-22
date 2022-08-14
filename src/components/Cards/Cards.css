@@ -17,11 +17,12 @@
   background: rgba(9, 9, 9, 0.25);
   max-height: 50vh;
   border-radius: 10px;
+  backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .card:hover {
   box-shadow: 0 8px 32px 0 #198fc1;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px);
   transition: 300ms;
 }
 .GridCards {
@@ -54,7 +55,7 @@
 }
 
 .disc {
-  color: rgb(99, 99, 99);
+  color: rgb(187, 187, 187);
 }
 .btn {
   width: 300px;
