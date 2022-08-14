@@ -23,19 +23,27 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
           <div className="buttons">
             <button className="neon-button">SignUp</button>
             <button className="neon-button">SignIn</button>
+            {/* <div class="button" id="button-2">
+              <div id="slide"></div>
+              <a href="#">Sign Up</a>
+            </div>
+            <div class="button" id="button-2">
+              <div id="slide"></div>
+              <a href="#">Sign In</a>
+            </div> */}
           </div>
         </div>
       </div>
       <div className="Event-cards">
         <div className="events">
           <h1 className="event-link">Your Events</h1>
-          <Eventcarousel/>
+          <Eventcarousel />
         </div>
       </div>
       <div className="Event-cards">
         <div className="events">
           <h1 className="event-link">Events</h1>
-          <Eventcarousel/>
+          <Eventcarousel />
         </div>
       </div>
       <div style={{ height: "50vh" }}>
