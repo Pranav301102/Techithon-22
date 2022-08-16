@@ -1,329 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
-	background: #222831;
+  background: #222831;
 }
 .select {
-	/* background-color: blue;
+  /* background-color: blue;
 	color: black;
 	width: 300px;
 	border-radius: 20px; */
-	color: black;
-	/* background-color: blue; */
-	box-shadow: 0 8px 32px 0 rgba(0, 173, 181, 0.17);
-	border-radius: 2rem;
-	width: 340px;
+  color: black;
+  /* background-color: blue; */
+  box-shadow: 0 8px 32px 0 rgba(0, 173, 181, 0.17);
+  border-radius: 2rem;
+  width: 340px;
 }
 .about-ieee {
-	height: 100vh;
-	/* background: #00ADB5; */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background: #1E1E1E; */
+}
+.about-ieee h1 {
+	padding: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0px 0px 6px #000000;
+}
+.about-ieee p {
+	padding: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.09em;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-shadow: 0px 0px 6px #000000;
+}
+
+.boxtwo {
+  box-sizing: border-box;
+  position: absolute;
+  width: 70vh;
+  height: 40vh;
+  left: 50vw;
+  top:45vh;
+  background:rgba(37, 122, 250, 0.05);
+  border: 1px solid #000000;
+  backdrop-filter: blur(104px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+}
+.boxone {
+  position: absolute;
+  width: 50vw;
+  height: 80vh;
+  left: 10vw;
+  top: 97px;
+
+  background: #06d9e4;
+  opacity: 0.6;
+  border-radius: 20px;
 }
 
 .backgroound-page {
-	height: 10;
+  height: 10;
 }
 
 section::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 section::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
-	position: relative;
-	z-index: 1;
-	/* display: flex;
+  position: relative;
+  z-index: 1;
+  /* display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap; */
-	margin: 40px 0;
+  margin: 40px 0;
 }
 
 .title {
-	display: inline-block;
-	margin-left: 670px;
-	color: white;
+  display: inline-block;
+  margin-left: 670px;
+  color: white;
 }
 .head {
-	display: inline-block;
-	margin-left: 700px;
-	color: white;
+  display: inline-block;
+  margin-left: 700px;
+  color: white;
 }
 .ah {
-	display: inline-block;
-	margin-left: 630px;
-	color: white;
+  display: inline-block;
+  margin-left: 630px;
+  color: white;
 }
 .ourTeamBlock {
-	display: grid;
-	grid-template-columns: auto auto auto auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 .container .card {
-	position: relative;
-	width: 300px;
-	height: 400px;
-	background: rgba(37, 122, 250, 0.05);
-	/* background: #00ADB5; */
-	margin: 20px;
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-	border-radius: 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	backdrop-filter: blur(10px);
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(37, 122, 250, 0.05);
+  /* background: #00ADB5; */
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
 }
 
 .container .card .content {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	transition: 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
 }
 
 .container .card:hover .content {
-	transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 .container .card .content .imgBx {
-	position: relative;
-	width: 150px;
-	height: 150px;
-	overflow: hidden;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
 }
 
 .container .card .content .imgBx img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .container .card .content .contentBx h3 {
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 500;
-	font-size: 18px;
-	text-align: center;
-	margin: 20px 0 10px;
-	line-height: 1.1em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
 }
 
 .container .card .content .contentBx h3 span {
-	font-size: 12px;
-	font-weight: 300;
-	text-transform: initial;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
 }
 
 .container .card .sci {
-	position: absolute;
-	bottom: 50px;
-	display: flex;
-	margin-left: -39px;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  margin-left: -39px;
 }
 
 .container .card .sci li {
-	list-style: none;
-	margin: 0 10px;
-	transform: translateY(40px);
-	transition: 0.5s;
-	opacity: 0;
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
 }
 
 .container .card:hover .sci li {
-	transform: translateY(0px);
-	opacity: 1;
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .container .card .sci li a {
-	color: #fff;
-	font-size: 20px;
+  color: #fff;
+  font-size: 20px;
 }
-
 
 /* For Tablet View */
-@media screen and (min-device-width: 768px)
-and (max-device-width: 1024px) {
-	.title {
-		display: inline-block;
-		margin-left: 70px;
-		color: white;
-	}
-	.head {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ah {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ourTeamBlock {
-		display: grid;
-		grid-template-columns: auto auto ;
-	}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .title {
+    display: inline-block;
+    margin-left: 70px;
+    color: white;
+  }
+  .head {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ah {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ourTeamBlock {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
- 
+
 /* For Mobile Portrait View */
-@media screen and (max-device-width: 480px)
-and (orientation: portrait) {
-	.title {
-		display: inline-block;
-		margin-left: 70px;
-		color: white;
-	}
-	.head {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ah {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ourTeamBlock {
-		display: grid;
-		grid-template-columns: auto;
-		margin-left: 20px;
-	}
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .title {
+    display: inline-block;
+    margin-left: 70px;
+    color: white;
+  }
+  .head {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ah {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ourTeamBlock {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 20px;
+  }
 }
- 
+
 /* For Mobile Landscape View */
-@media screen and (max-device-width: 640px)
-and (orientation: landscape) {
-	.title {
-		display: inline-block;
-		margin-left: 70px;
-		color: white;
-	}
-	.head {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ah {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ourTeamBlock {
-		display: grid;
-		grid-template-columns: auto ;
-		margin-left: 20px;
-	}
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+  .title {
+    display: inline-block;
+    margin-left: 70px;
+    color: white;
+  }
+  .head {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ah {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ourTeamBlock {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 20px;
+  }
 }
- 
+
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-device-width: 640px) {
-	.title {
-		display: inline-block;
-		margin-left: 70px;
-		color: white;
-	}
-	.head {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ah {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ourTeamBlock {
-		display: grid;
-		grid-template-columns: auto ;
-		margin-left: 20px;
-	}
+  .title {
+    display: inline-block;
+    margin-left: 70px;
+    color: white;
+  }
+  .head {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ah {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ourTeamBlock {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 20px;
+  }
 }
- 
+
 /* For iPhone 4 Portrait or Landscape View */
-@media screen and (min-device-width: 320px)
-and (-webkit-min-device-pixel-ratio: 2) {
-	.title {
-		display: inline-block;
-		margin-left: 120px;
-		color: white;
-	}
-	.head {
-		display: inline-block;
-		margin-left: 140px;
-		color: white;
-	}
-	.ah {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ourTeamBlock {
-		display: grid;
-		grid-template-columns: auto ;
-		margin-left: 20px;
-	}
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .title {
+    display: inline-block;
+    margin-left: 120px;
+    color: white;
+  }
+  .head {
+    display: inline-block;
+    margin-left: 140px;
+    color: white;
+  }
+  .ah {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ourTeamBlock {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 20px;
+  }
 }
- 
+
 /* For iPhone 5 Portrait or Landscape View */
-@media (device-height: 568px) and (device-width: 320px)
-and (-webkit-min-device-pixel-ratio: 2) {
-	.title {
-		display: inline-block;
-		margin-left: 70px;
-		color: white;
-	}
-	.head {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ah {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ourTeamBlock {
-		display: grid;
-		grid-template-columns: auto ;
-		margin-left: 20px;
-	}
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .title {
+    display: inline-block;
+    margin-left: 70px;
+    color: white;
+  }
+  .head {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ah {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ourTeamBlock {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 20px;
+  }
 }
- 
+
 /* For iPhone 6 and 6 plus Portrait or Landscape View */
-@media (min-device-height: 667px) and (min-device-width: 375px)
-and (-webkit-min-device-pixel-ratio: 3) {
-	.title {
-		display: inline-block;
-		margin-left: 700px;
-		color: white;
-	}
-	.head {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ah {
-		display: inline-block;
-		margin-left: 60px;
-		color: white;
-	}
-	.ourTeamBlock {
-		display: grid;
-		grid-template-columns: auto ;
-		margin-left: 20px;
-	}
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+  .title {
+    display: inline-block;
+    margin-left: 700px;
+    color: white;
+  }
+  .head {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ah {
+    display: inline-block;
+    margin-left: 60px;
+    color: white;
+  }
+  .ourTeamBlock {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 20px;
+  }
 }

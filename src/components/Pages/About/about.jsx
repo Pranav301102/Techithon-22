@@ -55,7 +55,11 @@ export default function About() {
   return (
     <>
       <div className="about-ieee">
-
+        <div className= "boxone"></div>
+        <div className= "boxtwo">
+          <h1>ABOUT US</h1>
+          <p>Aliquip ullamco eiusmod eu consectetur consequat cillum reprehenderit est.</p>
+        </div>
       </div>
       <div className="gridDisplay">
             <h1 className='title' >Our Team</h1>
