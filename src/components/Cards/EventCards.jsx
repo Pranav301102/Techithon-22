@@ -36,7 +36,7 @@ function NumCard() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const num = windowDimensions > 500 ? 4 : 1;
+  const num = windowDimensions > 500 ? 3 : 1 ;
   return num;
 }
 
