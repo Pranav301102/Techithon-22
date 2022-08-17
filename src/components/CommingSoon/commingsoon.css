@@ -61,4 +61,8 @@
 	.clock-wrap {
 		padding: 10px;
 	}
+	#coming-soon {
+		padding-top: 20px;
+		font-size: 30px;
+	}
 }
