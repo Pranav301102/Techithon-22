@@ -48,7 +48,7 @@ export function Header() {
             width="120px"
           ></img>
           <h1 className="nav-logo">Techithon</h1>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          {/* <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link
                 to="/"
@@ -103,7 +103,7 @@ export function Header() {
                 Signup
               </Link>
             </li>
-          </ul>
+          </ul> */}
           <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fa fa-times" : "fa fa-bars"}></i>
           </div>
