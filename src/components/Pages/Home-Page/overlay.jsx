@@ -1,10 +1,9 @@
 import React, { forwardRef } from "react";
-import { Header } from "../../Header/header";
 import "./home.css";
-import { useFrame } from "@react-three/fiber";
-import EventCards, { Eventcarousel } from "../../Cards/EventCards";
+import  { Eventcarousel } from "../../Cards/EventCards";
+import { Footer, Sponsers } from './footer';
 
-const Overlay = forwardRef(({ caption, scroll }, ref) => (
+const Overlay = forwardRef(({ scroll }, ref) => (
   <>
     <div
       ref={ref}
@@ -46,14 +45,13 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
           <Eventcarousel />
         </div>
       </div>
-      <div style={{ height: "50vh" }}>
+      <div style={{}}>
         <div className="footer">
-          <h1>Sponsers</h1>
+          <h1 className="sponsers">SPONSERS</h1>
+            <Sponsers/>
+            <Footer/>
         </div>
       </div>
-      {/* <span className="caption" ref={caption}>
-      0.00
-    </span> */}
     </div>
   </>
 ));

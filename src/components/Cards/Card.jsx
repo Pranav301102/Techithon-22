@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Cards/Cards.css';
 import Tilt from 'react-vanilla-tilt';
+import { Link } from 'react-router-dom';
 
 
 function Card(props) {
@@ -25,7 +26,12 @@ function Card(props) {
         <h3>Venue: {props.venue}</h3>
         <h3>Registration: {props.reg}</h3>
         </div>
+        <Link
+                to="/reg"
+                className="nav-links"
+              >
         <button className='btn' >Register</button>
+        </Link>
       </div>
       </Tilt>
     </>

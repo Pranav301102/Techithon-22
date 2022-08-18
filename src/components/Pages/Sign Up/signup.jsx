@@ -63,6 +63,7 @@ const MainContainer = styled.div`
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
+  overflow-y: auto  ;
   @media only screen and (max-width: 320px) {
     width: 80vw;
     height: 90vh;
@@ -98,18 +99,16 @@ const MainContainer = styled.div`
   }
   @media only screen and (min-width: 1024px) {
     width: 70vw;
-    height: 50vh;
+    height: 80vh;
     top: 10%;
     left: 10%
   }
   @media only screen and (min-width: 1280px) {
     width: 30vw;
-    height: 85vh;
+    height: 80vh;
     top: 10%;
     left: 10%
   }
-
-
 `;
 
 const WelcomeText = styled.h2`

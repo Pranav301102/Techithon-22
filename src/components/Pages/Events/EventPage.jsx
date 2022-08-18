@@ -1,7 +1,6 @@
 import React from "react";
 import {TechCards ,SportsCards,CultureCards} from "./Events";
 import styled from 'styled-components';
-import Backgrond from "../../Backgrond/backgrond";
 import SideBar from './SideBar';
 // import {
 //   BrowserRouter as Router,
@@ -16,18 +15,19 @@ export const EventCategory = styled.h1`
   color: #fff;
   text-decoration: none;
   padding-top: 120px ;
-  padding-left:7vw ;
+  padding-left:5vw ;
   height: 100%;
   border-bottom: 3px solid transparent;
+  text-transform: uppercase;
 
   &:after {
   content: "";
   display: block;
   height: 3px;
   width: 0;
-  max-width: 10rem;
+  max-width: 90vw;
   background: transparent;
-  transition: width 5s ease, background-color 0.5s ease;
+  transition: width 2s ease, background-color 0.5s ease;
 }
 
  &:hover:after {

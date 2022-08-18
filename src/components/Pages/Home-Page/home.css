@@ -1,14 +1,11 @@
-/* @import url("https://rsms.me/inter/inter.css"); */
-
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
 :root {
   --clr-neon: #00adb5;
-  --clr-bg: hsl(323 21% 16%);
 }
 
-*{
+* {
   box-sizing: border-box;
 }
-
 
 html,
 body,
@@ -18,7 +15,6 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  /* user-select: none; */
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -32,7 +28,7 @@ body,
   top: 0;
   left: 0;
   overflow-y: auto;
-  scroll-snap-type: y proximity;
+  /* scroll-snap-type: y proximity; */
   z-index: 40;
   -webkit-overflow-scrolling: touch;
 }
@@ -71,15 +67,19 @@ body {
   -webkit-font-smoothing: auto;
   pointer-events: none;
   color: white;
-  font-size: 4em;
-  font-weight: 100;
-  line-height: 1em;
+  font-size: 3.5em;
   margin: 0;
   margin-bottom: 0.25em;
   text-align: left;
   justify-content: center;
   padding-top: 100px;
-  padding-left: 20px;
+  padding-left: 3.5vw;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
 }
 
 .dot > img {
@@ -102,7 +102,6 @@ body {
   width: 100%;
   max-width: 700px;
   margin: 0% auto;
-
 }
 
 #container {
@@ -126,8 +125,10 @@ body {
   z-index: 60;
   display: block;
 }
-.footer h1{
-  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+.footer h1 {
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman",
+    "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular",
+    "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 }
 
 .event-link {
@@ -163,6 +164,8 @@ body {
   padding: 0.5rem 5.5rem;
   height: 100%;
   border-bottom: 3px solid transparent;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
 }
 
 .neon-button {
@@ -180,13 +183,12 @@ body {
   position: relative;
   margin: 100px 30px;
   background: transparent;
-
 }
 .button {
   /* display: inline-flex; */
   height: 40px;
   width: 150px;
-  border: 2px solid #BFC0C0;
+  border: 2px solid #bfc0c0;
   margin: 20px 20px 20px 20px;
   /* color: #BFC0C0; */
   text-transform: uppercase;
@@ -196,6 +198,7 @@ body {
   /* align-items: center;
   justify-content: center; */
   overflow: hidden;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 #button-2 {
   position: relative;
@@ -208,7 +211,7 @@ body {
   color: white;
   text-decoration: none;
   top: 5px;
-  transition: all .35s ease-Out;
+  transition: all 0.35s ease-Out;
 }
 #slide {
   /* width: 100%;
@@ -216,9 +219,9 @@ body {
   height: 40px;
   width: 150px;
   left: -200px;
-  background: #BFC0C0;
+  background: #bfc0c0;
   position: absolute;
-  transition: all .35s ease-Out;
+  transition: all 0.35s ease-Out;
   bottom: 0;
 }
 #button-2:hover #slide {
@@ -227,7 +230,7 @@ body {
 
 #button-2:hover a {
   /* color: #2D3142; */
-  
+
   color: black;
 }
 .neon-button::before,
@@ -272,18 +275,24 @@ body {
 .neon-button:hover::after {
   opacity: 1;
 }
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1280px) {
   .dot > img {
     width: 50%;
     height: 50%;
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .dot > img {
+    width: 70%;
+    height: 70%;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .dot > img {
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
   }
   .dot > h1 {
     font-size: 3em;
@@ -310,6 +319,91 @@ body {
   }
   .neon-button {
     margin: 50px 30px;
-
   }
 }
+
+.main ul{
+  list-style:none;
+    padding-left:0;
+}
+
+.main {
+  display: flex;
+  gap: 50px;
+  margin: 50px 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: ease 0.5s;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 300;
+
+}
+.col1 {
+  flex: 2;
+  
+}
+.col2 {
+  flex: 2;
+}
+.col3 {
+  flex: 3;
+}
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+.main a {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 5px 0;
+  color: rgb(255, 255, 255);
+  transition: ease 0.5s;
+  text-decoration: none;
+}
+.main a:hover {
+  color: #284dd9;
+}
+.partner-logo {
+  font-size: 50px;
+  color: tomato;
+  margin-top: 10px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright {
+  color: gray;
+}
+.policy a {
+  color: black;
+  margin-left: 20px;
+}
+
+.circle {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  border: solid 2px #d2dcf7;
+}
+.c1 {
+  top: -600px;
+  left: -500px;
+}
+.c2 {
+  bottom: -600px;
+  right: -200px;
+}
+.c3 {
+  bottom: -400px;
+  right: -500px;
+}
+
+

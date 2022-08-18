@@ -51,7 +51,7 @@ const MainContainer = styled.div`
   height: 80vh;
   width: 30vw;
   position: absolute;   
-  
+  z-index: 50;
   background: rgba(34,40,49, 0.45);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
@@ -60,6 +60,7 @@ const MainContainer = styled.div`
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
+  overflow-y: auto  ;
   @media only screen and (max-width: 320px) {
     width: 80vw;
     height: 90vh;
@@ -77,7 +78,6 @@ const MainContainer = styled.div`
     height: 90vh;
     top: 10%;
     
-  
     h4 {
       font-size: small;
     }
@@ -86,25 +86,25 @@ const MainContainer = styled.div`
     width: 80vw;
     height: 90vh;
     top: 10%;
-    
+    left: 10%
   }
   @media only screen and (min-width: 768px) {
     width: 80vw;
     height: 80vh;
     top: 10%;
-   
+    left: 10%
   }
   @media only screen and (min-width: 1024px) {
     width: 70vw;
-    height: 50vh;
+    height: 80vh;
     top: 10%;
-      
+    left: 10%
   }
   @media only screen and (min-width: 1280px) {
     width: 30vw;
     height: 80vh;
     top: 10%;
-    
+    left: 10%
   }
 `;
 
@@ -139,7 +139,7 @@ const HorizontalRule = styled.hr`
   height: 0.3rem;
   border-radius: 0.8rem;
   border: none;
-  background: linear-gradient(to right, #14163c 0%, #03217b 79%);
+  background: linear-gradient(to right, #1F3C67 10%, #00ADB5 79%);
   background-color: #ebd0d0;
   margin: 1.5rem 0 1rem 0;
   backdrop-filter: blur(25px);

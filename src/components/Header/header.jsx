@@ -87,15 +87,6 @@ export function Header() {
             </li>
             <li className="nav-item">
               <Link
-                to="/reg"
-                className="nav-links"
-                onClick={click ? handleClick : null}
-              >
-                Register
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
                 to="/signup"
                 className="nav-links"
                 onClick={click ? handleClick : null}

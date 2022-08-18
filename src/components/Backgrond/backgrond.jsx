@@ -61,10 +61,21 @@ function Dots({ duration, ...props }) {
 function HTMLContent(props) {
   const { width, height } = useThree((state) => state.viewport);
   console.log(width, height);
-  const w = width < 30 ? 0.4 : 0.16;
+  var w = 0.4
+  var h = height < 43 ? 2 : 0;
+  if(width<30){
+     w = 0.4
+  }
+  else if(width>30&&width<=64){
+    w=0.38
+  }
+  else{
+    w=0.16
+  }
+  // const w = width < 30 ? 0.4 : 0.16;
 
   return (
-    <Html position={[-width * w, 18, 0]} zIndexRange={[40, 0]}>
+    <Html position={[-width * w, 18 - h , 0]} zIndexRange={[40, 0]}>
       {props.children}
     </Html>
   );
