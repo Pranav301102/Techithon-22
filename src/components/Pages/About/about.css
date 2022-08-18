@@ -104,6 +104,7 @@ section::after {
 	align-items: center;
 	flex-wrap: wrap; */
   margin: 40px 0;
+  height: 40vh;
 }
 
 .title {
