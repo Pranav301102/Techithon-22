@@ -41,3 +41,7 @@
     opacity: 0.5;
     transform: scale(0.9);
   }
+
+.col1 a{
+  padding: 0px 0px 5px 5px;
+}

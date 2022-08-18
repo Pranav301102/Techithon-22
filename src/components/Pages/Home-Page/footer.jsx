@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import './Highlights.css'
+import { FaGithub,FaLinkedin,FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 export function Sponsers() {
   return (
     <Slider>
@@ -129,13 +130,22 @@ export function Footer() {
           <p class="heading">Developed By</p>
           <ul>
             <li>
-              <a href="#">Pranav Trivedi</a>
+              Pranav Trivedi  
+              <a href="" ><FaLinkedin/></a>
+              <a href="" ><FaInstagram/></a>
+              <a href="" ><FaGithub/></a>
             </li>
             <li>
-              <a href="#">Aryan Chavan</a>
+              Aryan Chavan
+              <a href="" ><FaLinkedin/></a>
+              <a href="" ><FaInstagram/></a>
+              <a href="" ><FaGithub/></a>
             </li>
             <li>
-              <a href="#">Sahil Bhat</a>
+                Sahil Bhatt
+                <a href="https://www.linkedin.com/in/sahil-bhatt-998347206/" ><FaLinkedin/></a>
+              <a href="" ><FaInstagram/></a>
+              <a href="https://github.com/Sahil8383" ><FaGithub/></a>
             </li>
           </ul>
         </div>

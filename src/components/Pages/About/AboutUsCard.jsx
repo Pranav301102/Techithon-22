@@ -1,5 +1,7 @@
 import React from 'react'
 import "./about.css";
+// import {FaLinkedin} from 'react-icons/fa';
+import { FaLinkedin,FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 function AboutUsCard(props) {
   return (
     <>
@@ -17,14 +19,14 @@ function AboutUsCard(props) {
               </div>
               <ul class="sci">
                 <li>
-                  <a href={props.instagram}><img src='github.png' ></img></a>
+                  <a href={props.instagram}><FaLinkedin/></a>
                 </li>
                 <li>
-                  <a href={props.linkdin}><img src='instagram.png' ></img></a>
+                  <a href={props.linkdin}><FaInstagram/></a>
                 </li>
-                <li>
+                {/* <li>
                   <a href=""><button>Icon</button></a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

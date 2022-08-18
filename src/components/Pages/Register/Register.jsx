@@ -7,6 +7,7 @@ import Input from "./InputReg";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Select from 'react-select';
 import '../About/about.css';
+import './DD.css';
 import { EventsData } from "../Events/EventData";
 import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 // import DD from './DropDownMenu';
@@ -39,10 +40,10 @@ export default function Register() {
     option: (provided, state) => ({
       ...provided,
       borderBottom: '1px dotted pink',
-      color: state.isSelected ? 'black': 'black' ,
-      borderRadius: '20px',
+      color: state.isSelected ? 'white': 'white' ,
+      // borderRadius: '20px',
       // padding: 20,
-      // background: "#101010"
+      background: "#101010"
     }),
     menu: base => ({
       ...base,
@@ -65,7 +66,7 @@ export default function Register() {
           <Input type="text" placeholder="Email" />
           <Input type="text" placeholder="Name" />
           <Input type="text" placeholder="Phone Number" />
-          <Select styles={customStyles} options={techCompanies} />
+          <Select className="select" styles={customStyles} options={techCompanies} />
           {/* <DD/> */}
         </InputContainer>
         {/* <h2 class >Entry Fees: {}</h2> */}

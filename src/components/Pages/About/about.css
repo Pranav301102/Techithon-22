@@ -7,11 +7,13 @@ body {
 	color: black;
 	width: 300px;
 	border-radius: 20px; */
-  color: black;
+  color: white;
   /* background-color: blue; */
   box-shadow: 0 8px 32px 0 rgba(0, 173, 181, 0.17);
   border-radius: 2rem;
   width: 340px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
 }
 .about-ieee {
   position: relative;
@@ -104,7 +106,7 @@ section::after {
 	align-items: center;
 	flex-wrap: wrap; */
   margin: 40px 0;
-  height: 40vh;
+  height: 55vh;
 }
 
 .title {
