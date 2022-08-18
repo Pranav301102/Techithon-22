@@ -68,6 +68,8 @@ export default function About() {
             <HeadCards/>
             <h1 className='ah' >Assitant Heads</h1>
             <AssitCards/>
+            <h1 className='ah' >Developed By</h1>
+            {/* <AssitCards/> */}
         </div>
     </>
   );

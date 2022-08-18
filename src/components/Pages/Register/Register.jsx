@@ -17,15 +17,16 @@ export default function Register() {
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      background: "#ffffff",
+      background: "#101010",
+      border: 'none',
       // background: rgba(34,40,49, 0.45),
       // color: 'black',
       // match with the menu
       width: '350px',
       height: '50px',
-      // color: '#ffffff',
+
       // background: 'tranparent',
-      borderRadius: '12px',
+      borderRadius: '20px',
       // Overwrittes the different states of border
       // borderColor: state.isFocused ? "yellow" : "green",
       // Removes weird border around container
@@ -39,7 +40,9 @@ export default function Register() {
       ...provided,
       borderBottom: '1px dotted pink',
       color: state.isSelected ? 'black': 'black' ,
-      padding: 20,
+      borderRadius: '20px',
+      // padding: 20,
+      // background: "#101010"
     }),
     menu: base => ({
       ...base,

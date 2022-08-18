@@ -17,10 +17,10 @@ function AboutUsCard(props) {
               </div>
               <ul class="sci">
                 <li>
-                  <a href={props.instagram}><button>Icon</button></a>
+                  <a href={props.instagram}><img src='github.png' ></img></a>
                 </li>
                 <li>
-                  <a href={props.linkdin}><button>Icon</button></a>
+                  <a href={props.linkdin}><img src='instagram.png' ></img></a>
                 </li>
                 <li>
                   <a href=""><button>Icon</button></a>
