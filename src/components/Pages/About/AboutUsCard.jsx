@@ -4,10 +4,10 @@ function AboutUsCard(props) {
   return (
     <>
         <section>
-          <div class="container">
-            <div class="card">
-              <div class="content">
-                <div class="imgBx">
+          <div className="container">
+            <div className="card">
+              <div className="content">
+                <div className="imgBx">
                   <img src={props.img} alt="Zoro"/>
                 </div>
                 <div class="contentBx">

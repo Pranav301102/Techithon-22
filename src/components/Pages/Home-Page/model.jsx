@@ -35,6 +35,7 @@ function Rig({ children, scroll }) {
   const { mouse, camera } = useThree();
   useFrame(() => {
     const offset = scroll.current;
+    camera.lookAt(vec.set(-3 + offset*5 , 0, 0));
     // camera.position.set(Math.sin(offset) * -10, Math.atan(offset * Math.PI * 2) * 5, Math.cos((offset * Math.PI) / 3) * -10)
     camera.position.lerp(
       vec.set(
@@ -50,7 +51,6 @@ function Rig({ children, scroll }) {
       (-mouse.x * Math.PI) / 20,
       0.1
     );
-    camera.lookAt(vec.set(-3 + offset*5 , 0, 0));
   });
   return <group ref={ref}>{children}</group>;
 }

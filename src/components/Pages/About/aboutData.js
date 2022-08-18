@@ -100,4 +100,31 @@ export const AboutData = [
         linkdin:"",
         img:"zoro.jpg"
     },
+    {
+        id:12,
+        category:"asst",
+        post:"Shinigami",
+        name: "Zoro uchiha",
+        instagram:"",
+        linkdin:"",
+        img:"zoro.jpg"
+    },
+    {
+        id:13,
+        category:"asst",
+        post:"Shinigami",
+        name: "Zoro uchiha",
+        instagram:"",
+        linkdin:"",
+        img:"zoro.jpg"
+    },
+    {
+        id:14,
+        category:"asst",
+        post:"Shinigami",
+        name: "Zoro uchiha",
+        instagram:"",
+        linkdin:"",
+        img:"zoro.jpg"
+    },   
 ]

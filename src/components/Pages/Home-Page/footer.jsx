@@ -126,57 +126,40 @@ export function Footer() {
     <>
       <div class="main">
         <div class="col1">
-          <p class="heading">Platform</p>
+          <p class="heading">Developed By</p>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="#">Pranav Trivedi</a>
             </li>
             <li>
-              <a href="#">Features</a>
+              <a href="#">Aryan Chavan</a>
             </li>
             <li>
-              <a href="#">API</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">What's new</a>
+              <a href="#">Sahil Bhat</a>
             </li>
           </ul>
         </div>
 
         <div class="col2">
-          <p class="heading">Resources</p>
+          <p class="heading">Contact Us</p>
           <ul>
             <li>
-              <a href="#">Documentation</a>
+              <a href="#">Phone</a>
             </li>
             <li>
-              <a href="#">FAQ</a>
+              <a href="#">Mail</a>
             </li>
             <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
+              <a href="#">Instagram</a>
             </li>
           </ul>
         </div>
 
-        <div class="col3">
-          <p class="heading">In partnership with</p>
-          <ion-icon name="logo-deviantart" class="partner-logo"></ion-icon>
-        </div>
       </div>
 
       <div class="bottom">
-        <p class="copyright">© 2020 boardme. All rights reserved.</p>
+        <p class="copyright">© 2020 IEEE Techithon. All rights reserved.</p>
 
-        <div class="policy">
-          <a href="#">Terms of Service</a>
-          <a href="#">Privacy Policy</a>
-        </div>
       </div>
     </>
   );
@@ -189,6 +172,7 @@ const Slider = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
+  background-color: rgb(44, 43, 43);
 
   &::before,
   &::after {
