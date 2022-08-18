@@ -46,7 +46,7 @@ const Countdown = () => {
 	return (
 		<section className="Countdown" id="#Countdown">
 			<h1 id="coming-soon">Coming Soon</h1>
-			<section className="container">
+			<section className="container-count">
 				<section className="timer">
 					<div className="clock">
 						<div className="clock-section">

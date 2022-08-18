@@ -172,6 +172,7 @@ const Slider = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
+  background-color: rgb(44, 43, 43);
 
   &::before,
   &::after {

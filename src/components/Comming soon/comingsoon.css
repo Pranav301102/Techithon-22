@@ -11,10 +11,10 @@
 	font-weight: bold;
 }
 
-.container {
+.container-count {
 	background-position: center;
 	background-size: cover;
-	height: 10vh;
+	height: 20vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
