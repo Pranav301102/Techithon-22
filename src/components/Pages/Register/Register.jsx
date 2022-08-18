@@ -7,7 +7,6 @@ import Input from "./InputReg";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Select from 'react-select';
 import '../About/about.css';
-import './DD.css';
 import { EventsData } from "../Events/EventData";
 import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 // import DD from './DropDownMenu';
