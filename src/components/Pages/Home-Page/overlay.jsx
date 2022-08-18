@@ -2,6 +2,8 @@ import React, { forwardRef } from "react";
 import "./home.css";
 import  { Eventcarousel } from "../../Cards/EventCards";
 import { Footer, Sponsers } from './footer';
+import Countdown from './../../Comming soon/CommingSoon';
+import { Highlights } from "./Highlights";
 
 const Overlay = forwardRef(({ scroll }, ref) => (
   <>
@@ -17,19 +19,11 @@ const Overlay = forwardRef(({ scroll }, ref) => (
       <div style={{ height: "100vh" }}>
         <div className="dot">
           <h1 id="ieee">IEEE Techithon 2022</h1>
-          {/* <h1> fest theme</h1> */}
           <img src="logo.png" alt="carnivel"></img>
+          <Countdown />
           <div className="buttons">
             <button className="neon-button">SignUp</button>
             <button className="neon-button">SignIn</button>
-            {/* <div class="button" id="button-2">
-              <div id="slide"></div>
-              <a href="#">Sign Up</a>
-            </div>
-            <div class="button" id="button-2">
-              <div id="slide"></div>
-              <a href="#">Sign In</a>
-            </div> */}
           </div>
         </div>
       </div>
@@ -45,7 +39,13 @@ const Overlay = forwardRef(({ scroll }, ref) => (
           <Eventcarousel />
         </div>
       </div>
-      <div style={{}}>
+      <div className="Highlights-div">
+        <div className="events">
+          <h1 className="highlights">HIGHLIGHTS</h1>
+          <Highlights/>
+        </div>
+      </div>
+      <div>
         <div className="footer">
           <h1 className="sponsers">SPONSERS</h1>
             <Sponsers/>
