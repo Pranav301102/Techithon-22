@@ -62,7 +62,7 @@ function HTMLContent(props) {
   const { width, height } = useThree((state) => state.viewport);
   console.log(width, height);
   var w = 0.4
-  var h = height < 43 ? 2 : 0;
+  var h = height < 43 ? 4 : 0;
   if(width<30){
      w = 0.4
   }

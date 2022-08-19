@@ -14,7 +14,7 @@ const renderThumb = ({ style, ...props }) => {
   return <div style={{ ...style, ...thumbStyle }} {...props} />;
 };
 
-const CustomScrollbars = props => (
+export const CustomScrollbars = props => (
   <Scrollbars
     renderThumbHorizontal={renderThumb}
     renderThumbVertical={renderThumb}

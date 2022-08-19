@@ -15,6 +15,7 @@ const StyledInput = styled.input`
   color: #3c354e;
   font-size: 1rem;
   font-weight: bold;
+  margin: 10px 0px;
   &:focus {
     display: inline-block;
     box-shadow: 0 0 0 0.2rem #00ADB5;

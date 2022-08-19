@@ -16,10 +16,9 @@ export const CulturalEvents = EventsData.filter(
 
 export function CreateCard(Events) {
   return (
-
     <>
-    
       <Card
+        id={Events.id}
         name={Events.name}
         disc={Events.disc}
         key={Events.id}

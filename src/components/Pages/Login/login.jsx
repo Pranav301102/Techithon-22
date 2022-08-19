@@ -48,7 +48,7 @@ const MainContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
+  min-height: 30vh;
   width: 30vw;
   position: absolute;   
   z-index: 50;
@@ -75,7 +75,7 @@ const MainContainer = styled.div`
   }
   @media only screen and (min-width: 360px) {
     width: 80vw;
-    height: 90vh;
+    height: 80vh;
     top: 10%;
     
     h4 {
@@ -84,7 +84,7 @@ const MainContainer = styled.div`
   }
   @media only screen and (min-width: 411px) {
     width: 80vw;
-    height: 90vh;
+    height: 80vh;
     top: 10%;
     left: 10%
   }
@@ -117,9 +117,8 @@ const InputContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 40%;
+  height: 50vh;
   width: 100%;
-
 `;
 
 const ButtonContainer = styled.div`

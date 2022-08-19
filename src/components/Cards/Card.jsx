@@ -1,10 +1,14 @@
 import React from 'react'
 import '../Cards/Cards.css';
 import Tilt from 'react-vanilla-tilt';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 
 
 function Card(props) {
+  const navigate =useNavigate()
+  const toRegister=()=>{
+    navigate('/reg',{state:props});
+      }
   return (
     <>
       {/* <div className="card">
@@ -26,12 +30,7 @@ function Card(props) {
         <h3>Venue: {props.venue}</h3>
         <h3>Registration: {props.reg}</h3>
         </div>
-        <Link
-                to="/reg"
-                className="nav-links"
-              >
-        <button className='btn' >Register</button>
-        </Link>
+        <button className='btn' onClick={()=>{toRegister()}} >Register</button>
       </div>
       </Tilt>
     </>

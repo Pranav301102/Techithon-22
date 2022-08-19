@@ -5,6 +5,7 @@ import Button from "./ButtonSignUp";
 import Icon from "./IconSignUp";
 import Input from "./InputSignUp";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { CustomScrollbars } from './../Events/SideBar';
 
 function signup() {
   const FacebookBackground =
@@ -66,7 +67,7 @@ const MainContainer = styled.div`
   overflow-y: auto  ;
   @media only screen and (max-width: 320px) {
     width: 80vw;
-    height: 90vh;
+    height: 80vh;
     top: 10%;
     left: 2%;
     hr {
@@ -78,7 +79,7 @@ const MainContainer = styled.div`
   }
   @media only screen and (min-width: 360px) {
     width: 80vw;
-    height: 90vh;
+    height: 80vh;
     top: 10%;
     
     h4 {
@@ -87,7 +88,7 @@ const MainContainer = styled.div`
   }
   @media only screen and (min-width: 411px) {
     width: 80vw;
-    height: 90vh;
+    height: 80vh;
     top: 10%;
     left: 10%
   }
@@ -120,7 +121,7 @@ const InputContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 40%;
+  height: 40vh;
   width: 100%;
 
 `;
@@ -146,6 +147,7 @@ const HorizontalRule = styled.hr`
   background-color: #ebd0d0;
   margin: 1.5rem 0 1rem 0;
   backdrop-filter: blur(25px);
+  padding:2px;
 `;
 
 const IconsContainer = styled.div`

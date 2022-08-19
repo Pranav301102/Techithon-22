@@ -2,15 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import Backgrond from "../../Backgrond/backgrond";
 import Button from "./ButtonReg";
-import Icon from "./IconReg";
 import Input from "./InputReg";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Select from 'react-select';
 import '../About/about.css';
 import { EventsData } from "../Events/EventData";
-import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+import { useLocation } from "react-router-dom";
 // import DD from './DropDownMenu';
 export default function Register() {
+  const location = useLocation();
+  console.log(location.state.id)
+
   const techCompanies = EventsData.map(function (element) {
     return { label: element.name, value: element.id }
   })
@@ -110,7 +111,7 @@ const MainContainer = styled.div`
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
-  overflow-y: auto  ;
+  overflow: auto ;
   @media only screen and (max-width: 320px) {
     width: 80vw;
     height: 90vh;

@@ -68,6 +68,7 @@ function CarouselCard(Events) {
   return (
     <SwiperSlide>
       <Card
+        id={Events.id}
         name={Events.name}
         disc={Events.disc}
         key={Events.id}
