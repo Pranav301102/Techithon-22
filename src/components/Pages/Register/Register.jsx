@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 // import DD from './DropDownMenu';
 export default function Register() {
   const location = useLocation();
-  console.log(location.state.id)
+  console.log(location.state)
 
   const techCompanies = EventsData.map(function (element) {
     return { label: element.name, value: element.id }
@@ -61,38 +61,41 @@ export default function Register() {
   return (
     <Backgrond>
       <MainContainer>
-        <WelcomeText>Welcome</WelcomeText>
+        <WelcomeText>{location.state.name}</WelcomeText>
         <InputContainer>
           <Input type="text" placeholder="Email" />
           <Input type="text" placeholder="Name" />
           <Input type="text" placeholder="Phone Number" />
-          <Select className="select" styles={customStyles} options={techCompanies} />
+          {/* <Select className="select" styles={customStyles} options={techCompanies} /> */}
           {/* <DD/> */}
         </InputContainer>
+        <Discription>
+          <h4>EVENT:{location.state.name}</h4>
+          <Dis>{location.state.disc}</Dis>
+          <h4>Time:{location.state.time}</h4>
+          <h4>Date:{location.state.date}</h4>
+          <h4>Amount To Be Paid:{location.state.reg}</h4>
+        </Discription>
         {/* <h2 class >Entry Fees: {}</h2> */}
         <ButtonContainer>
           <Button content="Register" />
         </ButtonContainer>
-        {/* <LoginWith>OR Sign Up WITH</LoginWith>
-        <HorizontalRule />
-        <IconsContainer>
-          <Icon color={FacebookBackground}>
-            <FaFacebookF />
-          </Icon>
-          <Icon color={InstagramBackground}>
-            <FaInstagram />
-          </Icon>
-          <Icon color={TwitterBackground}>
-            <FaTwitter />
-          </Icon>
-        </IconsContainer>
-        <ForgotPassword>Forgot Password ?</ForgotPassword> */}
       </MainContainer>
-
     </Backgrond>
   );
 }
 
+const Discription = styled.div`
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding:40px ;
+`
+const Dis = styled.a`
+  font-size: 1rem ;
+  text-transform:none ;
+  letter-spacing: 3px ;
+`
 
 
 const MainContainer = styled.div`
@@ -114,7 +117,7 @@ const MainContainer = styled.div`
   overflow: auto ;
   @media only screen and (max-width: 320px) {
     width: 80vw;
-    height: 90vh;
+    height: 70vh;
     top: 10%;
     left: 2%;
     hr {
@@ -126,7 +129,7 @@ const MainContainer = styled.div`
   }
   @media only screen and (min-width: 360px) {
     width: 80vw;
-    height: 90vh;
+    height: 70vh;
     top: 10%;
     
     h4 {
@@ -135,7 +138,7 @@ const MainContainer = styled.div`
   }
   @media only screen and (min-width: 411px) {
     width: 80vw;
-    height: 90vh;
+    height: 70vh;
     top: 10%;
     left: 10%
   }
@@ -177,10 +180,11 @@ const InputContainer = styled.div`
 const ButtonContainer = styled.div`
   margin: 1rem 0 2rem 0;
   width: 100%;
-  margin-top: 60px;  
+  /* margin-top: 200px;   */
   display: flex;
   align-items: center;
   justify-content: center;
+  bottom: 30px;
 `;
 
 const LoginWith = styled.h5`
