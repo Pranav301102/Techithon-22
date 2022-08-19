@@ -45,6 +45,7 @@ export const EventCategory = styled.h1`
 
 const Page = styled.div`
  background: #222831;
+ padding-bottom:70vh ;
 `;
 
 
