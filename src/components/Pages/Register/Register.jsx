@@ -70,11 +70,11 @@ export default function Register() {
           {/* <DD/> */}
         </InputContainer>
         <Discription>
-          <h4>EVENT:{location.state.name}</h4>
+          <h3>EVENT:{location.state.name}</h3>
           <Dis>{location.state.disc}</Dis>
-          <h4>Time:{location.state.time}</h4>
-          <h4>Date:{location.state.date}</h4>
-          <h4>Amount To Be Paid:{location.state.reg}</h4>
+          <h3>Time:{location.state.time}</h3>
+          <h3>Date:{location.state.date}</h3>
+          <h3>Amount To Be Paid:{location.state.reg}</h3>
         </Discription>
         {/* <h2 class >Entry Fees: {}</h2> */}
         <ButtonContainer>
@@ -92,7 +92,7 @@ const Discription = styled.div`
   padding:40px ;
 `
 const Dis = styled.a`
-  font-size: 1rem ;
+  font-size: 13px;
   text-transform:none ;
   letter-spacing: 3px ;
 `

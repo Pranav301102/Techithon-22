@@ -131,9 +131,9 @@ export function Footer() {
           <ul>
             <li>
               Pranav Trivedi  
-              <a href="" ><FaLinkedin/></a>
-              <a href="" ><FaInstagram/></a>
-              <a href="" ><FaGithub/></a>
+              <a href="https://www.linkedin.com/in/pranav-trivedi-699662233/" ><FaLinkedin/></a>
+              <a href="https://www.instagram.com/pranav_trivedi_02/" ><FaInstagram/></a>
+              <a href="https://github.com/Pranav301102" ><FaGithub/></a>
             </li>
             <li>
               Aryan Chavan
