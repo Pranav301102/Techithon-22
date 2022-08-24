@@ -16,7 +16,7 @@ const Overlay = forwardRef(({ scroll }, ref) => (
       }}
       className="scroll"
     >
-      <div style={{ height: "100vh" }}>
+      <div style={{minHeight:"100vh"}}>
         <div className="dot">
           <h1 id="ieee">IEEE Techithon 2022</h1>
           <img src="logo.png" alt="carnivel"></img>
@@ -37,6 +37,12 @@ const Overlay = forwardRef(({ scroll }, ref) => (
         <div className="events">
           <h1 className="event-link">Events</h1>
           <Eventcarousel />
+        </div>
+      </div>
+      <div className="Highlights-div">
+        <div className="events">
+          <h1 className="highlights">PRE EVENTS</h1>
+          <Highlights/>
         </div>
       </div>
       <div className="Highlights-div">

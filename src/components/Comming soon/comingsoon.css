@@ -9,6 +9,7 @@
 #coming-soon {
 	font-size: 60px;
 	font-weight: bold;
+	line-height: 50px;
 }
 
 .container-count {
@@ -64,5 +65,7 @@
 	#coming-soon {
 		padding-top: 20px;
 		font-size: 30px;
+		line-height: 30px;
 	}
 }
+
