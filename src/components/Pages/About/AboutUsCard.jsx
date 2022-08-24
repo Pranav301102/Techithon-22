@@ -1,3 +1,4 @@
+
 import React from 'react'
 import "./about.css";
 // import {FaLinkedin} from 'react-icons/fa';
@@ -19,10 +20,10 @@ function AboutUsCard(props) {
               </div>
               <ul class="sci">
                 <li>
-                  <a href={props.instagram}><FaLinkedin/></a>
+                  <a href={props.Linkedin}><FaLinkedin/></a>
                 </li>
                 <li>
-                  <a href={props.linkdin}><FaInstagram/></a>
+                  <a href={props.instagram}><FaInstagram/></a>
                 </li>
                 {/* <li>
                   <a href=""><button>Icon</button></a>
