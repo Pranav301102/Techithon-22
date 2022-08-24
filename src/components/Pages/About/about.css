@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body {
   background: #222831;
 }
@@ -12,7 +12,7 @@ body {
   box-shadow: 0 8px 32px 0 rgba(0, 173, 181, 0.17);
   border-radius: 2rem;
   width: 340px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
 }
 .about-ieee {
@@ -22,7 +22,7 @@ body {
   /* background: #1E1E1E; */
 }
 .about-ieee h1 {
-	padding: 10px;
+  padding: 10px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -37,12 +37,13 @@ body {
   text-shadow: 0px 0px 6px #000000;
 }
 .about-ieee p {
-	padding: 10px;
+  padding: 10px;
+  margin-top: -20px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 45px;
+  font-size: 13px;
+  line-height: 22px;
   display: flex;
   align-items: center;
   letter-spacing: 0.09em;
@@ -57,12 +58,15 @@ body {
   width: 70vh;
   height: 40vh;
   left: 50vw;
-  top:45vh;
-  background:rgba(37, 122, 250, 0.05);
+  top: 45vh;
+  background: rgba(37, 122, 250, 0.05);
   border: 1px solid #000000;
   backdrop-filter: blur(104px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 20px;
+  overflow: hidden;
+  line-height: 1.2em;
+  height: 20em;
 }
 .boxone {
   position: absolute;
