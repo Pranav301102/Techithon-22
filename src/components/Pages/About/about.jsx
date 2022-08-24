@@ -51,7 +51,7 @@ return (
 }
 
 export default function About() {
-  // const [ReadMore, setReadMore] = useState(false);
+  
   return (
     <>
       <div className="about-ieee">

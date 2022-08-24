@@ -239,6 +239,16 @@ section::after {
     display: grid;
     grid-template-columns: auto auto;
   }
+  .boxone{
+    width: 75vw;
+  }
+ 
+  .boxtwo{
+    margin-left: -200px;
+    margin-top: -150px;
+    width: 600px;
+    height: 350px;
+  }
 }
 
 /* For Mobile Portrait View */
@@ -262,6 +272,15 @@ section::after {
     display: grid;
     grid-template-columns: auto;
     margin-left: 20px;
+  }
+  .boxone{
+    display: none;
+  }
+  .boxtwo{
+    margin-left: -200px;
+    margin-top: -150px;
+    width: 400px;
+    height: 450px;
   }
 }
 
@@ -287,6 +306,16 @@ section::after {
     grid-template-columns: auto;
     margin-left: 20px;
   }
+  .boxone{
+    width: 75vw;
+  }
+ 
+  .boxtwo{
+    margin-left: -200px;
+    margin-top: -150px;
+    width: 600px;
+    height: 350px;
+  }
 }
 
 /* For Mobile Phones Portrait or Landscape View */
@@ -310,6 +339,16 @@ section::after {
     display: grid;
     grid-template-columns: auto;
     margin-left: 20px;
+  }
+  .boxone{
+    width: 75vw;
+  }
+ 
+  .boxtwo{
+    margin-left: -200px;
+    margin-top: -150px;
+    width: 550px;
+    height: 350px;
   }
 }
 
