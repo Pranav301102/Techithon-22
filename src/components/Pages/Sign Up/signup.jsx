@@ -22,7 +22,7 @@ function signup() {
 					<Input type="text" placeholder="Name" />
 					<Input type="email" placeholder="Email" />
 					<Input type="password" placeholder="Password" />
-					<Input type="password" placeholder="Password" />
+					<Input type="password" placeholder="Confirm Password" />
 				</InputContainer>
 				<ButtonContainer>
 					<Button content="Sign Up" />
