@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Backgrond from "../../Backgrond/backgrond";
 import Button from "./ButtonSignUp";
@@ -6,40 +6,112 @@ import Icon from "./IconSignUp";
 import Input from "./InputSignUp";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { CustomScrollbars } from "./../Events/SideBar";
+import axios from "axios";
+import config from "../../../config";
 
-function signup() {
+function Signup() {
 	const FacebookBackground =
 		"linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
 	const InstagramBackground =
 		"linear-gradient(to right, #A12AC4 0%, #ED586C 40%, #F0A853 100%)";
 	const TwitterBackground =
 		"linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)";
+
+	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [confirmPassword, setConfirmPassword] = useState("");
+
 	return (
 		<Backgrond>
 			<MainContainer>
 				<WelcomeText>Welcome</WelcomeText>
 				<InputContainer>
-					<Input type="text" placeholder="Name" />
-					<Input type="email" placeholder="Email" />
-					<Input type="password" placeholder="Password" />
-					<Input type="password" placeholder="Confirm Password" />
+					<Input
+						type="text"
+						placeholder="Username"
+						value={username}
+						onChange={(e) => setUsername(e.target.value)}
+					/>
+					<Input
+						type="email"
+						placeholder="Email"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					<Input
+						type="password"
+						placeholder="Password"
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+					/>
+					<Input
+						type="password"
+						placeholder="Confirm Password"
+						value={confirmPassword}
+						onChange={(e) => setConfirmPassword(e.target.value)}
+					/>
 				</InputContainer>
 				<ButtonContainer>
-					<Button content="Sign Up" />
+					<Button
+						content="Sign Up"
+						onClick={() => {
+							console.log({
+								name: username,
+								email,
+								password,
+								confirmPassword,
+							});
+
+							if (!username) return alert("username is required");
+							if (!email) return alert("email is required");
+							if (
+								!email.match(
+									/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+								)
+							)
+								return alert("invalid email");
+							if (!password) return alert("password is required");
+							if (!confirmPassword)
+								return alert("confirm password is required");
+							if (password != confirmPassword)
+								return alert("passwords don't match");
+
+							axios
+								.post(
+									`${config.backendLocation}/auth/register`,
+									{ username, email, password }
+								)
+								.then((res) => {
+									console.log(res.data);
+									window.location = "/login";
+								})
+								.catch((err) => {
+									console.error(err);
+									try {
+										alert(err.response.data.msg);
+									} catch {
+										alert(
+											"Something went wrong. Please tryt again"
+										);
+									}
+								});
+						}}
+					/>
 				</ButtonContainer>
 				{/* <LoginWith>OR Sign Up WITH</LoginWith>
         <HorizontalRule />
         <IconsContainer>
-          <Icon color={FacebookBackground}>
-            <FaFacebookF />
-          </Icon>
-          <Icon color={InstagramBackground}>
-            <FaInstagram />
-          </Icon>
-          <Icon color={TwitterBackground}>
-            <FaTwitter />
-          </Icon>
-        </IconsContainer> */}
+        <Icon color={FacebookBackground}>
+        <FaFacebookF />
+        </Icon>
+        <Icon color={InstagramBackground}>
+        <FaInstagram />
+        </Icon>
+        <Icon color={TwitterBackground}>
+        <FaTwitter />
+        </Icon>
+      </IconsContainer> */}
 				{/* <ForgotPassword>Forgot Password ?</ForgotPassword> */}
 			</MainContainer>
 		</Backgrond>
@@ -158,4 +230,4 @@ const ForgotPassword = styled.h4`
 	cursor: pointer;
 `;
 
-export default signup;
+export default Signup;
