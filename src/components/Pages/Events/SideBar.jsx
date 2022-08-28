@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { EventsData } from './EventData';
 import { useState } from 'react';
-import { TechEvents, CulturalEvents, SportsEvents} from './Events';
+import {SpecialAttractionEvents ,PreEvents,TechEvents, FunEvents, GamingEvents, NeonEvents, StrongmanEvents} from './Events';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 const renderThumb = ({ style, ...props }) => {
@@ -70,9 +70,14 @@ const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
       <CustomScrollbars>
+
+      <Dropdown data={SpecialAttractionEvents} link={"#SpecialAttractionEvents"} category={"Special Attraction Events"}/>
+      <Dropdown data={PreEvents} link={"#PreEvents"} category={"Pre Events"}/>
       <Dropdown data={TechEvents} link={"#TechEvents"} category={"Tech Events"}/>
-      <Dropdown data={CulturalEvents} link={"#CulturalEvents"} category={"Cultural Events"}/>
-      <Dropdown data={SportsEvents} link={"#SportsEvents"} category={"Sports Events"}/>
+      <Dropdown data={FunEvents} link={"#FunEvents"} category={"Fun Events"}/>
+      <Dropdown data={GamingEvents} link={"#GamingEvents"} category={"Gaming Events"}/>
+      <Dropdown data={NeonEvents} link={"#NeonEvents"} category={"Neon Events"}/>
+      <Dropdown data={StrongmanEvents} link={"#StrongmanEvents"} category={"Strongman Events"}/>
       </CustomScrollbars>
     </StyledMenu>
   )

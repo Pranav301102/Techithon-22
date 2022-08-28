@@ -3,16 +3,27 @@ import { EventsData } from "./EventData";
 import styled from "styled-components";
 
 
+export const SpecialAttractionEvents = EventsData.filter(
+  (EventsData) => EventsData.category === "SPECIAL ATTRACTION EVENTS"
+);
+export const PreEvents = EventsData.filter(
+  (EventsData) => EventsData.category === "PRE EVENTS"
+);
 export const TechEvents = EventsData.filter(
-  (EventsData) => EventsData.category === "tech"
+  (EventsData) => EventsData.category === "TECHNICAL EVENTS"
 );
-export const SportsEvents = EventsData.filter(
-  (EventsData) => EventsData.category === "sports"
+export const FunEvents = EventsData.filter(
+  (EventsData) => EventsData.category === "FUN EVENTS"
 );
-export const CulturalEvents = EventsData.filter(
-  (EventsData) => EventsData.category === "culture"
+export const GamingEvents = EventsData.filter(
+  (EventsData) => EventsData.category === "GAMING EVENTS"
 );
-
+export const NeonEvents = EventsData.filter(
+  (EventsData) => EventsData.category === "NEON EVENTS"
+);
+export const StrongmanEvents = EventsData.filter(
+  (EventsData) => EventsData.category === "STRONGMAN EVENTS"
+);
 
 export function CreateCard(Events) {
   return (
@@ -74,6 +85,22 @@ export const CardGrid = styled.div`
   }
 `;
 
+export function SpecialAttractionCards() {
+  return (
+    <>
+      <CardGrid>{SpecialAttractionEvents.map(CreateCard)}</CardGrid>
+    </>
+  );
+}
+
+export function PreCards() {
+  return (
+    <>
+      <CardGrid>{PreEvents.map(CreateCard)}</CardGrid>
+    </>
+  );
+}
+
 export function TechCards() {
   return (
     <>
@@ -82,18 +109,33 @@ export function TechCards() {
   );
 }
 
-export function SportsCards() {
+export function FunCards() {
   return (
     <>
-      <CardGrid>{SportsEvents.map(CreateCard)}</CardGrid>
+      <CardGrid>{FunEvents.map(CreateCard)}</CardGrid>
     </>
   );
 }
 
-export function CultureCards() {
+export function GamingCards() {
   return (
     <>
-      <CardGrid>{CulturalEvents.map(CreateCard)}</CardGrid>
+      <CardGrid>{GamingEvents.map(CreateCard)}</CardGrid>
+    </>
+  );
+}
+export function NeonCards() {
+  return (
+    <>
+      <CardGrid>{NeonEvents.map(CreateCard)}</CardGrid>
+    </>
+  );
+}
+
+export function StrongmanCards() {
+  return (
+    <>
+      <CardGrid>{StrongmanEvents.map(CreateCard)}</CardGrid>
     </>
   );
 }

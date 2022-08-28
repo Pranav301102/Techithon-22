@@ -1,5 +1,5 @@
 import React from "react";
-import {TechCards ,SportsCards,CultureCards} from "./Events";
+import {TechCards ,PreCards,SpecialAttractionCards, FunCards, GamingCards, NeonCards, StrongmanCards} from "./Events";
 import styled from 'styled-components';
 import SideBar from './SideBar';
 // import {
@@ -55,12 +55,20 @@ export default function Events() {
     <>
     <Page>
     <div className="menu"><SideBar/></div>
+    <EventCategory id="SpecialAttractionEvents">Special Attraction Events</EventCategory>
+    <SpecialAttractionCards />
+    <EventCategory id="PreEvents">Pre Events</EventCategory>
+    <PreCards/>
     <EventCategory id="TechEvents">Tech Events</EventCategory>
-    <TechCards />
-    <EventCategory id="CulturalEvents">Cultural Events</EventCategory>
-    <CultureCards/>
-    <EventCategory id="SportsEvents">Sports Events</EventCategory>
-    <SportsCards/>
+    <TechCards/>
+    <EventCategory id="FunEvents">Fun Events</EventCategory>
+    <FunCards />
+    <EventCategory id="GamingEvents">Gaming Events</EventCategory>
+    <GamingCards/>
+    <EventCategory id="NeonEvents">Neon Events</EventCategory>
+    <NeonCards/>
+    <EventCategory id="StrongmanEvents">Strongman Events</EventCategory>
+    <StrongmanCards />
     </Page>
     </>
   );
