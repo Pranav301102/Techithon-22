@@ -7,6 +7,8 @@ import Select from "react-select";
 import "../About/about.css";
 import { EventsData } from "../Events/EventData";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
+import config from "../../../config";
 // import DD from './DropDownMenu';
 export default function Register() {
 	const location = useLocation();
@@ -77,7 +79,31 @@ export default function Register() {
 					<Button
 						content="Register"
 						onClick={() => {
-							console.log("hello");
+							console.log(location.state.id);
+
+							axios
+								.post(
+									`${config.backendLocation}/register`,
+									{
+										eventId: location.state.id,
+									},
+									{ headers: { token: localStorage.token } }
+								)
+								.then((res) => {
+									console.log(res.data);
+									alert("succesfully registered");
+									window.location = "/";
+								})
+								.catch((err) => {
+									console.error(err);
+									try {
+										alert(err.response.data.msg);
+									} catch {
+										alert(
+											"Something went wrong. Please tryt again"
+										);
+									}
+								});
 						}}
 					/>
 				</ButtonContainer>
