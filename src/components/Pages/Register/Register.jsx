@@ -62,13 +62,6 @@ export default function Register() {
     <Backgrond>
       <MainContainer>
         <WelcomeText>{location.state.name}</WelcomeText>
-        <InputContainer>
-          <Input type="text" placeholder="Email" />
-          <Input type="text" placeholder="Name" />
-          <Input type="text" placeholder="Phone Number" />
-          {/* <Select className="select" styles={customStyles} options={techCompanies} /> */}
-          {/* <DD/> */}
-        </InputContainer>
         <Discription>
           <h3>EVENT:{location.state.name}</h3>
           <Dis>{location.state.disc}</Dis>
