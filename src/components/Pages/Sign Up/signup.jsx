@@ -29,7 +29,7 @@ function Signup() {
 				<InputContainer>
 					<Input
 						type="text"
-						placeholder="Username"
+						placeholder="Name"
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
 					/>
