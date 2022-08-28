@@ -1,65 +1,71 @@
 import React, { forwardRef } from "react";
 import "./home.css";
-import  { Eventcarousel } from "../../Cards/EventCards";
-import { Footer, Sponsers } from './footer';
-import Countdown from './../../Comming soon/CommingSoon';
+import { Eventcarousel } from "../../Cards/EventCards";
+import { Footer, Sponsers } from "./footer";
+import Countdown from "./../../Comming soon/CommingSoon";
 import { Highlights } from "./Highlights";
+import { RegisgteredEventcarousel } from "../../Cards/RegisteredEventCards";
 
 const Overlay = forwardRef(({ scroll }, ref) => (
-  <>
-    <div
-      ref={ref}
-      onScroll={(e) => {
-        scroll.current =
-          e.target.scrollTop / (e.target.scrollHeight - window.innerHeight);
-        // caption.current.innerText = scroll.current.toFixed(2)
-      }}
-      className="scroll"
-    >
-      <div style={{minHeight:"100vh"}}>
-        <div className="dot">
-          <h1 id="ieee">IEEE Techithon 2022</h1>
-          <img src="logo.png" alt="carnivel"></img>
-          <Countdown />
-          <div className="buttons">
-            <button className="neon-button">SignUp</button>
-            <button className="neon-button">SignIn</button>
-          </div>
-        </div>
-      </div>
-      <div className="Event-cards">
-        <div className="events">
-          <h1 className="event-link">Your Events</h1>
-          <Eventcarousel />
-        </div>
-      </div>
-      <div className="Event-cards">
-        <div className="events">
-          <h1 className="event-link">Events</h1>
-          <Eventcarousel />
-        </div>
-      </div>
-      <div className="Highlights-div">
-        <div className="events">
-          <h1 className="highlights">PRE EVENTS</h1>
-          <Highlights/>
-        </div>
-      </div>
-      <div className="Highlights-div">
-        <div className="events">
-          <h1 className="highlights">HIGHLIGHTS</h1>
-          <Highlights/>
-        </div>
-      </div>
-      <div>
-        <div className="footer">
-          <h1 className="sponsers">SPONSERS</h1>
-            <Sponsers/>
-            <Footer/>
-        </div>
-      </div>
-    </div>
-  </>
+	<>
+		<div
+			ref={ref}
+			onScroll={(e) => {
+				scroll.current =
+					e.target.scrollTop /
+					(e.target.scrollHeight - window.innerHeight);
+				// caption.current.innerText = scroll.current.toFixed(2)
+			}}
+			className="scroll"
+		>
+			<div style={{ minHeight: "100vh" }}>
+				<div className="dot">
+					<h1 id="ieee">IEEE Techithon 2022</h1>
+					<img src="logo.png" alt="carnivel"></img>
+					<Countdown />
+					<div className="buttons">
+						<button className="neon-button">SignUp</button>
+						<button className="neon-button">SignIn</button>
+					</div>
+				</div>
+			</div>
+			{localStorage.token && (
+				<>
+					<div className="Event-cards">
+						<div className="events">
+							<h1 className="event-link">Your Events</h1>
+							<RegisgteredEventcarousel />
+						</div>
+					</div>
+				</>
+			)}
+			<div className="Event-cards">
+				<div className="events">
+					<h1 className="event-link">Events</h1>
+					<Eventcarousel />
+				</div>
+			</div>
+			<div className="Highlights-div">
+				<div className="events">
+					<h1 className="highlights">PRE EVENTS</h1>
+					<Highlights />
+				</div>
+			</div>
+			<div className="Highlights-div">
+				<div className="events">
+					<h1 className="highlights">HIGHLIGHTS</h1>
+					<Highlights />
+				</div>
+			</div>
+			<div>
+				<div className="footer">
+					<h1 className="sponsers">SPONSERS</h1>
+					<Sponsers />
+					<Footer />
+				</div>
+			</div>
+		</div>
+	</>
 ));
 
 export default Overlay;
