@@ -15,3 +15,19 @@ export function Highlights(){
       </div>
     )
 }
+
+export function PreEvents(){
+    return(
+    <div class="content demo">
+        <div class="card-hghlght demo-card">
+            <img src="/img/3.jpg " alt="3"></img>
+        </div>
+        <div class="card-hghlght demo-card">
+        <img src="/img/8.jpg " alt="8"></img>        
+        </div>
+        <div class="card-hghlght demo-card">
+        <img src="/img/7.jpg " alt="7"></img>        
+        </div>     
+      </div>
+    )
+}
