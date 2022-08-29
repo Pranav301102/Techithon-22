@@ -92,7 +92,7 @@ export default function Register() {
 								.then((res) => {
 									console.log(res.data);
 									alert("succesfully registered");
-									window.location = "/";
+									window.location = "/ticket";
 								})
 								.catch((err) => {
 									console.error(err);
