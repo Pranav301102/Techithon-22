@@ -1,0 +1,18 @@
+.ticket {
+	/* background-color: white; */
+	color: black;
+	font-size: 30px;
+	/* height: 100%; */
+	display: block;
+	width: auto;
+	height: auto;
+	overflow: visible;
+}
+
+.qr {
+	margin: 20px;
+	width: 400px;
+	page-break-before: always; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+	page-break-after: always; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+	page-break-inside: avoid; /* or 'auto' */
+}
