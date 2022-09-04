@@ -5,7 +5,7 @@ import styled from "styled-components";
 import axios from "axios";
 import config from "../../../config";
 
-export const SpecialAttractionEvents = EventsData.filter(
+export const specialEvents = EventsData.filter(
 	(EventsData) => EventsData.category === "SPECIAL ATTRACTION EVENTS"
 );
 export const PreEvents = EventsData.filter(
@@ -88,12 +88,12 @@ export const CardGrid = styled.div`
 `;
 
 export function SpecialAttractionCards() {
-	const [specialEvents, setSpecialEvents] = useState([]);
-	useEffect(() => {
-		axios.get(`${config.backendLocation}/event`).then((res) => {
-			setSpecialEvents(res.data);
-		});
-	}, []);
+	// const [specialEvents, setSpecialEvents] = useState([]);
+	// useEffect(() => {
+	// 	axios.get(`${config.backendLocation}/event`).then((res) => {
+	// 		setSpecialEvents(res.data);
+	// 	});
+	// }, []);
 
 	return (
 		<>

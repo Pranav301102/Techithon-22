@@ -55,7 +55,9 @@ export default function About() {
   return (
     <>
       <div className="about-ieee">
-        <div className= "boxone"></div>
+        <div className= "boxone">
+          <img src="/banner.jpg" alt="poster"></img>
+        </div>
         <div className= "boxtwo">
           <h1>ABOUT IEEE TECHITHON</h1>
           <p>The Atharva College Of Engineering's Annual Technical Fest - IEEE TECHITHON, promotes engineering undergrads to demonstrate their technical prowess and develop new innovations. The major goal is to cultivate a drive for technical proficiency, logical cognition, logical reasoning and intelligent decision-making.A city-wide platform for all Technology Fans to display their skills and produce amazing products. IEEE TECHITHON '22 is a culmination of the work done by Young Tech Wizards.</p>

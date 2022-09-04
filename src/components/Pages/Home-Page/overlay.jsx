@@ -3,7 +3,7 @@ import "./home.css";
 import { Eventcarousel } from "../../Cards/EventCards";
 import { Footer, Sponsers } from "./footer";
 import Countdown from "./../../Comming soon/CommingSoon";
-import { Highlights } from "./Highlights";
+import { Highlights,PreEvents } from "./Highlights";
 import { RegisgteredEventcarousel } from "../../Cards/RegisteredEventCards";
 
 const Overlay = forwardRef(({ scroll }, ref) => (
@@ -48,7 +48,7 @@ const Overlay = forwardRef(({ scroll }, ref) => (
 			<div className="Highlights-div">
 				<div className="events">
 					<h1 className="highlights">PRE EVENTS</h1>
-					<Highlights />
+					<PreEvents />
 				</div>
 			</div>
 			<div className="Highlights-div">
