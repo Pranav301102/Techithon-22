@@ -9,6 +9,7 @@ import { EventsData } from "../Events/EventData";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import config from "../../../config";
+
 // import DD from './DropDownMenu';
 export default function Register() {
 	const location = useLocation();
@@ -63,6 +64,49 @@ export default function Register() {
 	useEffect(() => {
 		if (!localStorage.token) window.location = "/login";
 	}, []);
+
+	const initPayment = (data) => {
+		const options = {
+			key: "rzp_test_qExSitmCBrejZo",
+			amount: data.amount,
+			currency: data.currency,
+			name: "name",
+			description: "Test Transaction",
+			order_id: data.id,
+			handler: async (response) => {
+				try {
+					const verifyUrl = `${config.backendLocation}/register/verify/${location.state.id}`;
+					const { data } = await axios.post(verifyUrl, response, {
+						headers: { token: localStorage.token },
+					});
+					console.log(data);
+					window.location = "/";
+				} catch (error) {
+					console.log(error);
+				}
+			},
+			theme: {
+				color: "#3399cc",
+			},
+		};
+		const rzp1 = new window.Razorpay(options);
+		rzp1.open();
+	};
+
+	const handlePayment = async () => {
+		try {
+			const { data } = await axios.post(
+				`${config.backendLocation}/register/order/${location.state.id}`,
+				{},
+				{ headers: { token: localStorage.token } }
+			);
+			console.log(data);
+			initPayment(data.data);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
 		<Backgrond>
 			<MainContainer>
@@ -78,33 +122,34 @@ export default function Register() {
 				<ButtonContainer>
 					<Button
 						content="Register"
-						onClick={() => {
-							console.log(location.state.id);
+						onClick={handlePayment}
+						// onClick={() => {
+						// 	console.log(location.state.id);
 
-							axios
-								.post(
-									`${config.backendLocation}/register`,
-									{
-										eventId: location.state.id,
-									},
-									{ headers: { token: localStorage.token } }
-								)
-								.then((res) => {
-									console.log(res.data);
-									alert("succesfully registered");
-									window.location = "/ticket";
-								})
-								.catch((err) => {
-									console.error(err);
-									try {
-										alert(err.response.data.msg);
-									} catch {
-										alert(
-											"Something went wrong. Please tryt again"
-										);
-									}
-								});
-						}}
+						// 	axios
+						// 		.post(
+						// 			`${config.backendLocation}/register`,
+						// 			{
+						// 				eventId: location.state.id,
+						// 			},
+						// 			{ headers: { token: localStorage.token } }
+						// 		)
+						// 		.then((res) => {
+						// 			console.log(res.data);
+						// 			alert("succesfully registered");
+						// 			window.location = "/ticket";
+						// 		})
+						// 		.catch((err) => {
+						// 			console.error(err);
+						// 			try {
+						// 				alert(err.response.data.msg);
+						// 			} catch {
+						// 				alert(
+						// 					"Something went wrong. Please tryt again"
+						// 				);
+						// 			}
+						// 		});
+						// }}
 					/>
 				</ButtonContainer>
 			</MainContainer>
