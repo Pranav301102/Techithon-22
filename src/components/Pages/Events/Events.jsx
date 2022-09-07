@@ -88,12 +88,12 @@ export const CardGrid = styled.div`
 `;
 
 export function SpecialAttractionCards() {
-	// const [specialEvents, setSpecialEvents] = useState([]);
-	// useEffect(() => {
-	// 	axios.get(`${config.backendLocation}/event`).then((res) => {
-	// 		setSpecialEvents(res.data);
-	// 	});
-	// }, []);
+	const [specialEvents, setSpecialEvents] = useState([]);
+	useEffect(() => {
+		axios.get(`${config.backendLocation}/event`).then((res) => {
+			setSpecialEvents(res.data);
+		});
+	}, []);
 
 	return (
 		<>
