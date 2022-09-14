@@ -100,8 +100,8 @@ body {
   /* padding: 40px; */
   -webkit-font-smoothing: auto;
   text-align: center;
-  width: 100%;
-  max-width: 750px;
+  width: 40vw;
+  /* max-width: 750px; */
   margin: -5% auto;
 }
 
@@ -336,6 +336,24 @@ body {
   }
   .neon-button {
     margin: 50px 30px;
+  }
+
+}
+@media only screen and (max-width: 500px) {
+  .dot > img {
+    width: 100%;
+    height: 100%;
+  }
+  .dot > h1 {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+  }
+  .neon-button {
+    margin: 50px 30px;
+  }
+  .dot > .buttons{
+    width: 100%;
   }
 }
 
