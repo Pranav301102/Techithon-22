@@ -37,7 +37,7 @@ export function CreateCard(Events) {
 				key={Events._id}
 				time={Events.time}
 				date={Events.date}
-				venue={Events.venue}
+				prize={Events.prize}
 				reg={`₹${Events.price} ${Events.pricing}`}
 			/>
 		</>

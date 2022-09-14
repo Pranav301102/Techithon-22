@@ -66,7 +66,7 @@ function HTMLContent(props) {
   if(width<30){
      w = 0.4
   }
-  else if(width>30&&width<=64){
+  else if(width>30&&width<64){
     w=0.38
   }
   else{
@@ -75,7 +75,7 @@ function HTMLContent(props) {
   // const w = width < 30 ? 0.4 : 0.16;
 
   return (
-    <Html position={[-width * w, 18 - h , 0]} zIndexRange={[40, 0]}>
+    <Html position={[-width * w, 15 - h , 0]} zIndexRange={[40, 0]}>
       {props.children}
     </Html>
   );
