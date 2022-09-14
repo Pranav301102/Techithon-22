@@ -122,7 +122,7 @@ const MainContainer = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	height: 80vh;
+	height: 70vh;
 	width: 30vw;
 	position: absolute;
 	z-index: 50;
@@ -149,7 +149,7 @@ const MainContainer = styled.div`
 	}
 	@media only screen and (min-width: 360px) {
 		width: 80vw;
-		height: 80vh;
+		height: 70vh;
 		top: 10%;
 
 		h4 {
@@ -158,25 +158,25 @@ const MainContainer = styled.div`
 	}
 	@media only screen and (min-width: 411px) {
 		width: 80vw;
-		height: 80vh;
+		height: 70vh;
 		top: 10%;
 		left: 10%;
 	}
 	@media only screen and (min-width: 768px) {
 		width: 80vw;
-		height: 80vh;
+		height: 70vh;
 		top: 10%;
 		left: 10%;
 	}
 	@media only screen and (min-width: 1024px) {
 		width: 70vw;
-		height: 80vh;
+		height: 70vh;
 		top: 10%;
 		left: 10%;
 	}
 	@media only screen and (min-width: 1280px) {
 		width: 30vw;
-		height: 80vh;
+		height: 75vh;
 		top: 10%;
 		left: 10%;
 	}

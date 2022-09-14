@@ -27,7 +27,7 @@ function Card(props) {
         <div className="disc"><p>{props.disc}</p>
         <h3>Time: {props.time}</h3>
         <h3>Date: {props.date}</h3>
-        <h3>Venue: {props.venue}</h3>
+        <h3>Prize Worth: {`₹${props.prize}`}</h3>
         <h3>Registration: {props.reg}</h3>
         </div>
         <button className='btn' onClick={()=>{toRegister()}} >Register</button>

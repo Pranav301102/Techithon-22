@@ -24,8 +24,8 @@ const Overlay = forwardRef(({ scroll }, ref) => (
 					<img src="logo.png" alt="carnivel"></img>
 					<Countdown />
 					<div className="buttons">
-						<button className="neon-button">SignUp</button>
-						<button className="neon-button">SignIn</button>
+						<button className="neon-button">Show Ticket</button>
+						
 					</div>
 				</div>
 			</div>
