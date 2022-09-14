@@ -33,8 +33,10 @@
 }
 .btn{
     width: 300px;
-    height: 50px;
+    height: 100%;
     border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .card-hghlght img {
     margin-top: -14px;
