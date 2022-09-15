@@ -65,7 +65,7 @@ body {
     top: 45vh;
     background: rgba(37, 122, 250, 0.05);
     border: 1px solid #000000;
-    backdrop-filter: blur(104px);
+    backdrop-filter: blur(10px);
     /* Note: backdrop-filter has minimal browser support */
     border-radius: 20px;
     overflow: hidden;
