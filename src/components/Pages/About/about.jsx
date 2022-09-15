@@ -56,7 +56,7 @@ export default function About() {
     <>
       <div className="about-ieee">
         <div className= "boxone">
-          <img src="/banner.jpg" alt="poster"></img>
+          <img src="/AboutUsPage162KB.jpeg" alt="poster"></img>
         </div>
         <div className= "boxtwo">
           <h1>ABOUT IEEE TECHITHON</h1>
