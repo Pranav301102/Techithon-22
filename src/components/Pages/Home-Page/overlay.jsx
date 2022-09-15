@@ -55,12 +55,15 @@ const Overlay = forwardRef(({ scroll }, ref) => (
 				<div className="events">
 					<h1 className="highlights">HIGHLIGHTS</h1>
 					<Highlights />
+					<div id="highlightdiv">
+					<img id="highlightimg" src="figma.png" alt="Highlights"></img>
+					</div>
 				</div>
 			</div>
 			<div>
 				<div className="footer">
-					<h1 className="sponsers">SPONSERS</h1>
-					<Sponsers />
+					{/* <h1 className="sponsers">SPONSERS</h1>
+					<Sponsers /> */}
 					<Footer />
 				</div>
 			</div>
