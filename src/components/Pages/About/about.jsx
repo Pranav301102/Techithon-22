@@ -71,6 +71,7 @@ export default function About() {
             <h1 className='ah' >Assitant Heads</h1>
             <AssitCards/>
         </div>
+      
     </>
   );
 }

@@ -59,7 +59,7 @@ body {
 .boxtwo {
     box-sizing: border-box;
     position: absolute;
-    width: 70vh;
+    width: 30vw;
     height: 40vh;
     left: 50vw;
     top: 45vh;
@@ -81,8 +81,6 @@ body {
     height: 80vh;
     left: 10vw;
     top: 97px;
-    background: #06d9e4;
-    opacity: 0.6;
     border-radius: 20px;
 }
 
@@ -120,20 +118,20 @@ section::after {
 }
 
 .title {
-    display: inline-block;
-    margin-left: 670px;
+    text-align: center;
+    /* margin-left: 670px; */
     color: white;
 }
 
 .head {
-    display: inline-block;
-    margin-left: 700px;
+    text-align: center;
+    /* margin-left: 700px; */
     color: white;
 }
 
 .ah {
-    display: inline-block;
-    margin-left: 630px;
+    text-align: center;
+    /* margin-left: 630px; */
     color: white;
 }
 
@@ -236,7 +234,7 @@ section::after {
 
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .title {
+    /* .title {
         display: inline-block;
         margin-left: 70px;
         color: white;
@@ -250,7 +248,7 @@ section::after {
         display: inline-block;
         margin-left: 60px;
         color: white;
-    }
+    } */
     .ourTeamBlock {
         display: grid;
         grid-template-columns: auto auto;
@@ -272,7 +270,7 @@ section::after {
 
 
  @media screen and (max-device-width: 480px) and (orientation: portrait) {
-    .title {
+    /* .title {
         display: inline-block;
         margin-left: 70px;
         color: white;
@@ -286,29 +284,52 @@ section::after {
         display: inline-block;
         margin-left: 60px;
         color: white;
-    }
+    } */
     .ourTeamBlock {
         display: grid;
         grid-template-columns: auto;
         margin-left: 20px;
     }
     .boxone {
-        display: none;
+        top:80px;
+        width: 100vw;
+        border-radius: 0%;
+    }
+    .boxone img {
+        /* max-width: fit-content; */
+        width: 100%;
+        border-radius: 0%;
     }
     .boxtwo {
-        margin-left: -200px;
+        /* margin-left: -200px;
         margin-top: -150px;
         width: 400px;
         height: 450px;
+        display: none; */
+        max-width: 100vw;
+        min-height: 50vh;
+        top: 55vh;
+        background: none;
+        border: none;
+        backdrop-filter: none;
+        /* text-align: center; */
         
     }
+    .boxtwo h1{
+        font-size: 20px;
+        padding-left: 17vw;
+    }
+    .boxtwo a{
+        font-size: 15px;
+    }
+
 }
 
 
 
 
 @media screen and (max-device-width: 640px) and (orientation: landscape) {
-    .title {
+    /* .title {
         display: inline-block;
         margin-left: 70px;
         color: white;
@@ -321,16 +342,15 @@ section::after {
     .ah {
         display: inline-block;
         margin-left: 60px;
-        color: white;
-    }
+        color: white;} */
+    
     .ourTeamBlock {
         display: grid;
         grid-template-columns: auto;
         margin-left: 20px;
     }
     .boxone {
-       
-        display: none;
+        width: 100%;
     }
     .boxtwo {
         margin-left: -200px;
@@ -345,7 +365,7 @@ section::after {
 
 
 @media screen and (max-device-width: 640px) {
-    .title {
+    /* .title {
         display: inline-block;
         margin-left: 70px;
         color: white;
@@ -359,14 +379,15 @@ section::after {
         display: inline-block;
         margin-left: 60px;
         color: white;
-    }
+    } */
     .ourTeamBlock {
         display: grid;
         grid-template-columns: auto;
         margin-left: 20px;
     }
     .boxone {
-        width: 75vw;
+        width: 100%;
+        left: 0%;
     }
     .boxtwo {
         margin-left: -200px;
@@ -386,23 +407,8 @@ section::after {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-    .title {
+    /* .title {
         display: inline-block;
         margin-left: 120px;
         color: white;
@@ -416,7 +422,7 @@ section::after {
         display: inline-block;
         margin-left: 60px;
         color: white;
-    }
+    } */
     .ourTeamBlock {
         display: grid;
         grid-template-columns: auto;
@@ -428,7 +434,7 @@ section::after {
 
 
 @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-    .title {
+    /* .title {
         display: inline-block;
         margin-left: 70px;
         color: white;
@@ -442,7 +448,7 @@ section::after {
         display: inline-block;
         margin-left: 60px;
         color: white;
-    }
+    } */
     .ourTeamBlock {
         display: grid;
         grid-template-columns: auto;
@@ -454,7 +460,7 @@ section::after {
 
 
 @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
-    .title {
+    /* .title {
         display: inline-block;
         margin-left: 700px;
         color: white;
@@ -468,7 +474,7 @@ section::after {
         display: inline-block;
         margin-left: 60px;
         color: white;
-    }
+    } */
     .ourTeamBlock {
         display: grid;
         grid-template-columns: auto;
