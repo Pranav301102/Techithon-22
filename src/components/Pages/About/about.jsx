@@ -55,8 +55,13 @@ export default function About() {
   return (
     <>
       <div className="about-ieee">
+        <div className="logos">
+          <img src="IEEE_Atharva_logo_-removebg.png" className="iee"></img>
+          <img src="logo.png" className="alca"></img>
+          <img src="ACE.png" className="ace"></img>
+        </div>
         <div className= "boxone">
-          <img src="/banner.jpg" alt="poster"></img>
+          <img src="/AboutUsPage162KB.jpeg" alt="poster"></img>
         </div>
         <div className= "boxtwo">
           <h1>ABOUT IEEE TECHITHON</h1>
