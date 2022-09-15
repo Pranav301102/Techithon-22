@@ -40,6 +40,18 @@ function Signup() {
 						onChange={(e) => setEmail(e.target.value)}
 					/>
 					<Input
+						type="number"
+						placeholder="Phone Number"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					<Input
+						type="text"
+						placeholder="Name of College"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					<Input
 						type="password"
 						placeholder="Password"
 						value={password}
@@ -191,7 +203,7 @@ const InputContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 40vh;
+	height: 50vh;
 	width: 100%;
 `;
 

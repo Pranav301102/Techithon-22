@@ -168,7 +168,7 @@ export function Footer() {
           <p class="heading">Presented Buy</p>
           <ul>
             <li>
-              <img src="logoblack.png"></img>
+              <img src="ACE.png"></img>
             </li>
             <li>
               <img src="atharva logo-Recovered_new.png"></img>
