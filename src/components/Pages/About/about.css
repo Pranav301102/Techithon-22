@@ -72,7 +72,9 @@ body {
     line-height: 1.2em;
     height: 20em;
 }
-
+.boxone{
+    position: relative;
+}
 .boxone img{
     /* position: absolute;
     display: flex;
@@ -88,26 +90,29 @@ body {
     margin-top: -20px;
 }
 .logos{
-    /* position: absolute; */
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    margin-top: 100px;
 }
-.iee{
-    /* position: absolute; */
+.boxone .iee{
+    position: absolute;
     width: 50px;
     height: 50px;
+    left: 5%;
+    top: 120px;
 }
-.alca{
-    /* position: absolute; */
-    width: 50px;
-    height: 50px;
- 
-}
-.ace{
-    /* position: absolute; */
+.boxone .alca{
+    position: absolute;
+    width: 40%;
+    height: 20vh;
     left: 30%;
+    top: 120px;
+}
+.boxone .ace{
+    position: absolute;
+    left: 94%;
     width: 50px;
     height: 50px;
+    top: 120px;
 }
 .backgroound-page {
     height: 10;
