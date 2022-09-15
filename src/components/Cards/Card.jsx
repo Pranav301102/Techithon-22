@@ -30,7 +30,7 @@ function Card(props) {
         <h3>Prize Worth: {`₹${props.prize}`}</h3>
         <h3>Registration: {props.reg}</h3>
         </div>
-        <button className='btn' onClick={()=>{toRegister()}} >Register</button>
+        <button className='btn10' onClick={()=>{toRegister()}} >Register</button>
       </div>
       </Tilt>
     </>

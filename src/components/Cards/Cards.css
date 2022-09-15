@@ -56,7 +56,7 @@
 .disc {
   color: rgb(187, 187, 187);
 }
-.btn {
+.btn10 {
   width: 300px;
   height: 30px;
   margin-top: 2%; 
@@ -70,7 +70,7 @@
   border-right: none;
   border-bottom: none;
 }
-.btn:hover {
+.btn10:hover {
   background-color: #00ADB5;
   border: none;
 }
