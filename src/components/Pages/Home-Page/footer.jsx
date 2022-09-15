@@ -154,13 +154,16 @@ export function Footer() {
           <p class="heading">Contact Us</p>
           <ul>
             <li>
-              <a href="#">Phone</a>
+              <a href="#">Omkar Ayare</a>
             </li>
             <li>
-              <a href="#">Mail</a>
+              Phone: 81696 37616
             </li>
             <li>
-              <a href="#">Instagram</a>
+              <a href="#">Kaushik Gudalkar </a>
+            </li>
+            <li>
+              Phone: 93265 43550
             </li>
           </ul>
         </div>
