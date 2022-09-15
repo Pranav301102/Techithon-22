@@ -164,6 +164,17 @@ export function Footer() {
             </li>
           </ul>
         </div>
+        <div class="col3">
+          <p class="heading">Presented Buy</p>
+          <ul>
+            <li>
+              <img src="logoblack.png"></img>
+            </li>
+            <li>
+              <img src="atharva logo-Recovered_new.png"></img>
+            </li>
+          </ul>
+        </div>
 
       </div>
 
