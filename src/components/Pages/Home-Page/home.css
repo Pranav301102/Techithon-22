@@ -455,3 +455,16 @@ body {
 .Highlights-div{
   display: block;
 }
+
+#highlightdiv{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  height: 80vh;
+}
+
+#highlightimg{
+  
+  height: 100%;
+  padding: 50px;
+}
