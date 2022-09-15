@@ -386,6 +386,12 @@ body {
 .col3 {
   flex: 3;
 }
+
+.col3 img{
+  height: 70px;
+  width: 70px;
+}
+
 .heading {
   font-size: 16px;
   font-weight: 600;
