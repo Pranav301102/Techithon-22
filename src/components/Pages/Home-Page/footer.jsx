@@ -168,7 +168,7 @@ export function Footer() {
           </ul>
         </div>
         <div class="col3">
-          <p class="heading">Presented Buy</p>
+          {/* <p class="heading">Presented By</p> */}
           <ul>
             <li>
               <img src="ACE.png"></img>
