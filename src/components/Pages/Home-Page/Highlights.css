@@ -37,6 +37,8 @@
     border-top: none;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    background-color: #00ADB5;
+    border: none;
 }
 .card-hghlght img {
     margin-top: -14px;
