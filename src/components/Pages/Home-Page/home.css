@@ -463,8 +463,9 @@ body {
   height: 80vh;
 }
 
-#highlightimg{
-  
-  height: 100%;
+#highlightimg{ 
+  height: fit-content;
+  max-height: 80vh;
+  max-width: 110vw;;
   padding: 50px;
 }
