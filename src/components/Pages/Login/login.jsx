@@ -38,7 +38,7 @@ function Login() {
 				</InputContainer>
 				<ButtonContainer>
 					<Button
-						content="Sign Up"
+						content="Sign In"
 						onClick={() => {
 							console.log({
 								username,
