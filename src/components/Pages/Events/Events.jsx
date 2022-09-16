@@ -88,63 +88,121 @@ export const CardGrid = styled.div`
 `;
 
 export function SpecialAttractionCards() {
-	const [specialEvents, setSpecialEvents] = useState([]);
+	const [eventList, setEventList] = useState([]);
 	useEffect(() => {
 		axios.get(`${config.backendLocation}/event`).then((res) => {
-			setSpecialEvents(res.data);
+			setEventList(
+				res.data.filter(
+					(event) => event.category == "SPECIAL ATTRACTIONS"
+				)
+			);
 		});
 	}, []);
 
 	return (
 		<>
-			<CardGrid>{specialEvents.map(CreateCard)}</CardGrid>
+			<CardGrid>{eventList.map(CreateCard)}</CardGrid>
 		</>
 	);
 }
 
 export function PreCards() {
+	const [eventList, setEventList] = useState([]);
+	useEffect(() => {
+		axios.get(`${config.backendLocation}/event`).then((res) => {
+			setEventList(
+				res.data.filter((event) => event.category == "PRE-EVENTS")
+			);
+		});
+	}, []);
+
 	return (
 		<>
-			<CardGrid>{PreEvents.map(CreateCard)}</CardGrid>
+			<CardGrid>{eventList.map(CreateCard)}</CardGrid>
 		</>
 	);
 }
 
 export function TechCards() {
+	const [eventList, setEventList] = useState([]);
+	useEffect(() => {
+		axios.get(`${config.backendLocation}/event`).then((res) => {
+			setEventList(
+				res.data.filter((event) => event.category == "TECHNICAL EVENTS")
+			);
+		});
+	}, []);
+
 	return (
 		<>
-			<CardGrid>{TechEvents.map(CreateCard)}</CardGrid>
+			<CardGrid>{eventList.map(CreateCard)}</CardGrid>
 		</>
 	);
 }
 
 export function FunCards() {
+	const [eventList, setEventList] = useState([]);
+	useEffect(() => {
+		axios.get(`${config.backendLocation}/event`).then((res) => {
+			setEventList(
+				res.data.filter((event) => event.category == "FUN EVENTS")
+			);
+		});
+	}, []);
+
 	return (
 		<>
-			<CardGrid>{FunEvents.map(CreateCard)}</CardGrid>
+			<CardGrid>{eventList.map(CreateCard)}</CardGrid>
 		</>
 	);
 }
 
 export function GamingCards() {
+	const [eventList, setEventList] = useState([]);
+	useEffect(() => {
+		axios.get(`${config.backendLocation}/event`).then((res) => {
+			setEventList(
+				res.data.filter((event) => event.category == "GAMING EVENTS")
+			);
+		});
+	}, []);
+
 	return (
 		<>
-			<CardGrid>{GamingEvents.map(CreateCard)}</CardGrid>
+			<CardGrid>{eventList.map(CreateCard)}</CardGrid>
 		</>
 	);
 }
 export function NeonCards() {
+	const [eventList, setEventList] = useState([]);
+	useEffect(() => {
+		axios.get(`${config.backendLocation}/event`).then((res) => {
+			setEventList(
+				res.data.filter((event) => event.category == "NEON EVENTS")
+			);
+		});
+	}, []);
+
 	return (
 		<>
-			<CardGrid>{NeonEvents.map(CreateCard)}</CardGrid>
+			<CardGrid>{eventList.map(CreateCard)}</CardGrid>
 		</>
 	);
 }
 
 export function StrongmanCards() {
+	const [eventList, setEventList] = useState([]);
+	useEffect(() => {
+		axios.get(`${config.backendLocation}/event`).then((res) => {
+			setEventList(
+				res.data.filter((event) => event.category == "STRONGMAN EVENTS")
+			);
+		});
+	}, []);
+
 	return (
 		<>
-			<CardGrid>{StrongmanEvents.map(CreateCard)}</CardGrid>
+			<CardGrid>{eventList.map(CreateCard)}</CardGrid>
 		</>
 	);
 }

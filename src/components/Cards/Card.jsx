@@ -25,8 +25,7 @@ function Card(props) {
       <div className="card" id={props.name} name={props.name}> 
         <h2>{props.name}</h2>
         <div className="disc"><p>{props.disc}</p>
-        <h3>Time: {props.time}</h3>
-        <h3>Date: {props.date}</h3>
+        {props.date && <h3>Date: {props.date}</h3>}
         <h3>Prize Worth: {`₹${props.prize}`}</h3>
         <h3>Registration: {props.reg}</h3>
         </div>
