@@ -38,7 +38,7 @@ export function CreateCard(Events) {
 				time={Events.time}
 				date={Events.date}
 				prize={Events.prize}
-				reg={`₹${Events.price} ${Events.pricing}`}
+				price={`${Events.price} ${Events.pricing}`}
 			/>
 		</>
 	);

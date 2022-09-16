@@ -114,9 +114,9 @@ export default function Register() {
 				<Discription>
 					<h3>EVENT:{location.state.name}</h3>
 					<Dis>{location.state.disc}</Dis>
-					<h3>Time:{location.state.time}</h3>
+					{/* <h3>Time:{location.state.time}</h3> */}
 					<h3>Date:{location.state.date}</h3>
-					<h3>Amount To Be Paid:{location.state.reg}</h3>
+					<h3>Amount To Be Paid: ₹{location.state.price}</h3>
 				</Discription>
 				{/* <h2 class >Entry Fees: {}</h2> */}
 				<ButtonContainer>
