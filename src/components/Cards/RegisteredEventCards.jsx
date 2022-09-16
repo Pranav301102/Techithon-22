@@ -85,6 +85,7 @@ function CarouselCard(Events) {
 				date={Events.date}
 				venue={Events.venue}
 				price={Events.price}
+				pricing={Events.pricing}
 				prize={Events.prize}
 			/>
 		</SwiperSlide>

@@ -4,6 +4,7 @@ import { EventsData } from "./EventData";
 import styled from "styled-components";
 import axios from "axios";
 import config from "../../../config";
+import { events } from "@react-three/fiber";
 
 export const specialEvents = EventsData.filter(
 	(EventsData) => EventsData.category === "SPECIAL ATTRACTION EVENTS"
@@ -38,7 +39,8 @@ export function CreateCard(Events) {
 				time={Events.time}
 				date={Events.date}
 				prize={Events.prize}
-				price={`${Events.price} ${Events.pricing}`}
+				pricing={Events.pricing}
+				price={Events.price}
 			/>
 		</>
 	);

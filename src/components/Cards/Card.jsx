@@ -30,7 +30,7 @@ function Card(props) {
 						<p>{props.disc}</p>
 						{props.date && <h3>Date: {props.date}</h3>}
 						<h3>Prize Worth: ₹{props.prize}</h3>
-						<h3>Registration: ₹{props.price}</h3>
+						<h3>Registration: ₹{props.price} {props.pricing}</h3>
 					</div>
 					<button
 						className="btn10"
