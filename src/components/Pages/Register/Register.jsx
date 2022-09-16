@@ -94,16 +94,21 @@ export default function Register() {
 	};
 
 	const handlePayment = async () => {
-		try {
-			const { data } = await axios.post(
-				`${config.backendLocation}/register/order/${location.state.id}`,
-				{},
-				{ headers: { token: localStorage.token } }
-			);
-			console.log(data);
-			initPayment(data.data);
-		} catch (error) {
-			console.log(error);
+		console.log(location.state);
+		if (location.state.price == 0) {
+			console.log("free");
+		} else {
+			try {
+				const { data } = await axios.post(
+					`${config.backendLocation}/register/order/${location.state.id}`,
+					{},
+					{ headers: { token: localStorage.token } }
+				);
+				console.log(data);
+				initPayment(data.data);
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
 
@@ -116,7 +121,10 @@ export default function Register() {
 					<Dis>{location.state.disc}</Dis>
 					{/* <h3>Time:{location.state.time}</h3> */}
 					<h3>Date:{location.state.date}</h3>
-					<h3>Amount To Be Paid: ₹{location.state.price}</h3>
+					<h3>
+						Amount To Be Paid: ₹{location.state.price}{" "}
+						{location.state.pricing}
+					</h3>
 				</Discription>
 				{/* <h2 class >Entry Fees: {}</h2> */}
 				<ButtonContainer>
