@@ -97,6 +97,16 @@ export default function Register() {
 		console.log(location.state);
 		if (location.state.price == 0) {
 			console.log("free");
+			axios
+				.post(
+					`${config.backendLocation}/register/free/${location.state.id}`,
+					{},
+					{ headers: { token: localStorage.token } }
+				)
+				.then((res) => {
+					console.log(res.data);
+					window.location = "/";
+				});
 		} else {
 			try {
 				const { data } = await axios.post(
