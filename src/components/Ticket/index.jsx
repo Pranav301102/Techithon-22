@@ -5,6 +5,7 @@ import config from "../../config";
 
 function Ticket() {
 	const [user, setUser] = useState();
+	const [events, setEvents] = useState([]);
 
 	useEffect(() => {
 		axios
@@ -13,10 +14,18 @@ function Ticket() {
 			})
 			.then((res) => {
 				setUser(res.data);
-				setInterval(() => {
-					window.print();
-					window.location = "/";
-				}, 3000);
+				// setInterval(() => {
+				// 	window.print();
+				// 	window.location = "/";
+				// }, 3000);
+			});
+
+		axios
+			.get(`${config.backendLocation}/register`, {
+				headers: { token: localStorage.token },
+			})
+			.then((res) => {
+				setEvents(res.data);
 			});
 	}, []);
 
@@ -32,6 +41,13 @@ function Ticket() {
 						className="qr"
 						src={`https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=${user._id}`}
 					/>
+					<br />
+					Events:
+					<ul>
+						{events.map((event, i) => (
+							<li key={i}>{event.name}</li>
+						))}
+					</ul>
 				</div>
 			)}
 		</>
