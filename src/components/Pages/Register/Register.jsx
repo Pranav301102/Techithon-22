@@ -67,7 +67,7 @@ export default function Register() {
 
 	const initPayment = (data) => {
 		const options = {
-			key: "rzp_test_qExSitmCBrejZo",
+			key: config.razorpayKey,
 			amount: data.amount,
 			currency: data.currency,
 			name: "name",
