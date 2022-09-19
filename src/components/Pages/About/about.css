@@ -472,6 +472,9 @@ section::after {
 		width: 550px;
 		height: 350px;
 	}
+	.container {
+		margin: 30px auto;
+	}
 }
 
 .boxone img {
