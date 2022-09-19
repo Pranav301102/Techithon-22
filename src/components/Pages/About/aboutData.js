@@ -175,7 +175,7 @@ export const AboutData = [
 	{
 		id: 20,
 		category: "asst",
-		post: "Pubilicity Head",
+		post: "Pubilicity",
 		name: "Aastha Pimple",
 		instagram: "https://www.instagram.com/aastha_018/",
 		linkdin: "",
@@ -223,7 +223,7 @@ export const AboutData = [
 		post: "Digital Creative",
 		name: "Arnav Pawar",
 		instagram: "https://www.instagram.com/Arnav_1703_",
-		linkdin: "",
+		linkdin: "https://www.linkedin.com/in/arnavpawar/",
 		img: "img/Arnav edited-min.jpg",
 	},
 	{
@@ -241,7 +241,8 @@ export const AboutData = [
 		post: "Digital Creative",
 		name: "Agneya Pathare",
 		instagram: "https://www.instagram.com/agneya_pathare/",
-		linkdin: "",
+		linkdin:
+			"https://www.linkedin.com/in/agneya-pathare/?trk=public_profile_browsemap&originalSubdomain=in",
 		img: "img/Agneya .jpg",
 	},
 ];
