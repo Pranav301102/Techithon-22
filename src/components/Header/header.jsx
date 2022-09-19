@@ -50,16 +50,17 @@ export function Header() {
 						height="50px"
 						width="120px"
 					></img>
-					<h1 className="nav-logo">Techithon</h1>
+					<h1
+						className="nav-logo"
+						onClick={() => (window.location = "/")}
+					>
+						Techithon
+					</h1>
 					<ul className={click ? "nav-menu active" : "nav-menu"}>
 						<li className="nav-item">
-							<Link
-								to="/"
-								className="nav-links"
-								onClick={click ? handleClick : null}
-							>
+							<span style={{color: "white"}} onClick={() => (window.location = "/")}>
 								Home
-							</Link>
+							</span>
 						</li>
 						<li className="nav-item">
 							<Link
