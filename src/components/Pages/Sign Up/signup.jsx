@@ -213,7 +213,7 @@ const InputContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 50vh;
+	height: 70vh;
 	width: 100%;
 `;
 
