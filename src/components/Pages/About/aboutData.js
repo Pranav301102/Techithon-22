@@ -2,15 +2,6 @@
 
 export const AboutData = [
 	{
-		id: 8,
-		category: "head",
-		post: "Technical",
-		name: "Abdul Kabeer Shivani",
-		instagram: "https://www.instagram.com/kabs225/",
-		linkdin: "",
-		img: "img/Abdul.jpg",
-	},
-	{
 		id: 1,
 		category: "top",
 		post: "Cheif Event Coordinator",
@@ -72,6 +63,15 @@ export const AboutData = [
 		instagram: "https://www.instagram.com/adarshdubey108/",
 		linkdin: "",
 		img: "img/Adarsh Dubey - Technical head -min.JPG",
+	},
+	{
+		id: 8,
+		category: "head",
+		post: "Technical",
+		name: "Abdul Kabeer Shivani",
+		instagram: "https://www.instagram.com/kabs225/",
+		linkdin: "",
+		img: "img/Abdul.jpg",
 	},
 	{
 		id: 9,
@@ -222,7 +222,7 @@ export const AboutData = [
 		category: "asst",
 		post: "Digital Creative",
 		name: "Arnav Pawar",
-		instagram: "https://www.instagram.com/Arnav_1703",
+		instagram: "https://www.instagram.com/Arnav_1703_",
 		linkdin: "",
 		img: "img/Arnav edited-min.jpg",
 	},
@@ -238,7 +238,7 @@ export const AboutData = [
 	{
 		id: 27,
 		category: "asst",
-		post: "Digital Creation",
+		post: "Digital Creative",
 		name: "Agneya Pathare",
 		instagram: "https://www.instagram.com/agneya_pathare/",
 		linkdin: "",
