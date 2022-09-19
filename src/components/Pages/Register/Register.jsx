@@ -65,13 +65,14 @@ export default function Register() {
 		if (!localStorage.token) window.location = "/login";
 	}, []);
 
-	const initPayment = (data) => {
+	const initPayment = (data, eventName) => {
+		console.log(eventName);
 		const options = {
 			key: config.razorpayKey,
 			amount: data.amount,
 			currency: data.currency,
-			name: "name",
-			description: "Test Transaction",
+			name: eventName,
+			description: "Event Registration",
 			order_id: data.id,
 			handler: async (response) => {
 				try {
@@ -115,7 +116,7 @@ export default function Register() {
 					{ headers: { token: localStorage.token } }
 				);
 				console.log(data);
-				initPayment(data.data);
+				initPayment(data.data, location.state.name);
 			} catch (error) {
 				console.log(error);
 			}
