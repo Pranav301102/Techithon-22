@@ -55,10 +55,10 @@ export default function Events() {
     <>
     <Page>
     <div className="menu"><SideBar/></div>
-    <EventCategory id="SpecialAttractionEvents">Special Attraction Events</EventCategory>
-    <SpecialAttractionCards />
     <EventCategory id="PreEvents">Pre Events</EventCategory>
     <PreCards/>
+    <EventCategory id="SpecialAttractionEvents">Special Attraction Events</EventCategory>
+    <SpecialAttractionCards />
     <EventCategory id="TechEvents">Tech Events</EventCategory>
     <TechCards/>
     <EventCategory id="FunEvents">Fun Events</EventCategory>
