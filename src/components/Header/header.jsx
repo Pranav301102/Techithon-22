@@ -58,7 +58,13 @@ export function Header() {
 					</h1>
 					<ul className={click ? "nav-menu active" : "nav-menu"}>
 						<li className="nav-item">
-							<span style={{color: "white"}} onClick={() => (window.location = "/")}>
+							<span
+								style={{
+									color: "white",
+									cursor: "pointer",
+								}}
+								onClick={() => (window.location = "/")}
+							>
 								Home
 							</span>
 						</li>
