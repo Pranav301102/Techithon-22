@@ -15,7 +15,7 @@ function Login() {
 	const TwitterBackground =
 		"linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)";
 
-	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	return (
@@ -24,10 +24,10 @@ function Login() {
 				<WelcomeText>Welcome</WelcomeText>
 				<InputContainer>
 					<Input
-						type="text"
-						placeholder="Name"
-						value={username}
-						onChange={(e) => setUsername(e.target.value)}
+						type="email"
+						placeholder="Email"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
 					/>
 					<Input
 						type="password"
@@ -41,16 +41,16 @@ function Login() {
 						content="Sign In"
 						onClick={() => {
 							console.log({
-								username,
+								email,
 								password,
 							});
 
-							if (!username) return alert("username is required");
+							if (!email) return alert("email is required");
 							if (!password) return alert("password is required");
 
 							axios
 								.post(`${config.backendLocation}/auth/login`, {
-									username,
+									email,
 									password,
 								})
 								.then((res) => {
