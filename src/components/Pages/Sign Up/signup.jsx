@@ -20,6 +20,8 @@ function Signup() {
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [phone, setPhone] = useState();
+	const [college, setCollege] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 
 	return (
@@ -42,14 +44,14 @@ function Signup() {
 					<Input
 						type="number"
 						placeholder="Phone Number"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
+						value={phone}
+						onChange={(e) => setPhone(e.target.value)}
 					/>
 					<Input
 						type="text"
 						placeholder="Name of College"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
+						value={college}
+						onChange={(e) => setCollege(e.target.value)}
 					/>
 					<Input
 						type="password"
@@ -77,6 +79,8 @@ function Signup() {
 
 							if (!username) return alert("username is required");
 							if (!email) return alert("email is required");
+							if (!phone) return alert("phone is required");
+							if (!college) return alert("college is required");
 							if (
 								!email.match(
 									/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -92,7 +96,13 @@ function Signup() {
 							axios
 								.post(
 									`${config.backendLocation}/auth/register`,
-									{ username, email, password }
+									{
+										username,
+										email,
+										password,
+										phone,
+										college,
+									}
 								)
 								.then((res) => {
 									console.log(res.data);
@@ -203,7 +213,7 @@ const InputContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 50vh;
+	height: 70vh;
 	width: 100%;
 `;
 

@@ -3,7 +3,7 @@ import "./home.css";
 import { Eventcarousel } from "../../Cards/EventCards";
 import { Footer, Sponsers } from "./footer";
 import Countdown from "./../../Comming soon/CommingSoon";
-import { Highlights,PreEvents } from "./Highlights";
+import { Highlights, PreEvents } from "./Highlights";
 import { RegisgteredEventcarousel } from "../../Cards/RegisteredEventCards";
 
 const Overlay = forwardRef(({ scroll }, ref) => (
@@ -24,8 +24,14 @@ const Overlay = forwardRef(({ scroll }, ref) => (
 					<img src="logo.png" alt="carnivel"></img>
 					<Countdown />
 					<div className="buttons">
-						<button className="neon-button">Show Ticket</button>
-						
+						{localStorage.token && (
+							<button
+								className="neon-button"
+								onClick={() => (window.location = "/ticket")}
+							>
+								Show Ticket
+							</button>
+						)}
 					</div>
 				</div>
 			</div>
@@ -56,7 +62,11 @@ const Overlay = forwardRef(({ scroll }, ref) => (
 					<h1 className="highlights">HIGHLIGHTS</h1>
 					{/* <Highlights /> */}
 					<div id="highlightdiv">
-					<img id="highlightimg" src="event.png" alt="Highlights"></img>
+						<img
+							id="highlightimg"
+							src="event.png"
+							alt="Highlights"
+						></img>
 					</div>
 				</div>
 			</div>

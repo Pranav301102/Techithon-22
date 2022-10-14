@@ -1,12 +1,18 @@
 .ticket {
-	/* background-color: white; */
+	margin-top: 80px;
+	min-height: calc(100vh - 80px);
+	padding-inline: 20px;
+	background-color: white;
 	color: black;
 	font-size: 30px;
-	/* height: 100%; */
 	display: block;
 	width: auto;
 	height: auto;
 	overflow: visible;
+}
+
+.ticket ul {
+	margin-top: 10px;
 }
 
 .qr {

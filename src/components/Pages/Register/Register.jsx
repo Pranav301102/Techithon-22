@@ -65,13 +65,14 @@ export default function Register() {
 		if (!localStorage.token) window.location = "/login";
 	}, []);
 
-	const initPayment = (data) => {
+	const initPayment = (data, eventName) => {
+		console.log(eventName);
 		const options = {
-			key: "rzp_test_qExSitmCBrejZo",
+			key: config.razorpayKey,
 			amount: data.amount,
 			currency: data.currency,
-			name: "name",
-			description: "Test Transaction",
+			name: eventName,
+			description: "Event Registration",
 			order_id: data.id,
 			handler: async (response) => {
 				try {
@@ -94,16 +95,31 @@ export default function Register() {
 	};
 
 	const handlePayment = async () => {
-		try {
-			const { data } = await axios.post(
-				`${config.backendLocation}/register/order/${location.state.id}`,
-				{},
-				{ headers: { token: localStorage.token } }
-			);
-			console.log(data);
-			initPayment(data.data);
-		} catch (error) {
-			console.log(error);
+		console.log(location.state);
+		if (location.state.price == 0) {
+			console.log("free");
+			axios
+				.post(
+					`${config.backendLocation}/register/free/${location.state.id}`,
+					{},
+					{ headers: { token: localStorage.token } }
+				)
+				.then((res) => {
+					console.log(res.data);
+					window.location = "/";
+				});
+		} else {
+			try {
+				const { data } = await axios.post(
+					`${config.backendLocation}/register/order/${location.state.id}`,
+					{},
+					{ headers: { token: localStorage.token } }
+				);
+				console.log(data);
+				initPayment(data.data, location.state.name);
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
 
@@ -114,9 +130,12 @@ export default function Register() {
 				<Discription>
 					<h3>EVENT:{location.state.name}</h3>
 					<Dis>{location.state.disc}</Dis>
-					<h3>Time:{location.state.time}</h3>
+					{/* <h3>Time:{location.state.time}</h3> */}
 					<h3>Date:{location.state.date}</h3>
-					<h3>Amount To Be Paid:{location.state.reg}</h3>
+					<h3>
+						Amount To Be Paid: ₹{location.state.price}{" "}
+						{location.state.pricing}
+					</h3>
 				</Discription>
 				{/* <h2 class >Entry Fees: {}</h2> */}
 				<ButtonContainer>
@@ -173,7 +192,7 @@ const MainContainer = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	height: 80vh;
+	height: 50vh;
 	width: 30vw;
 	position: absolute;
 	z-index: 50;
@@ -215,19 +234,19 @@ const MainContainer = styled.div`
 	}
 	@media only screen and (min-width: 768px) {
 		width: 80vw;
-		height: 80vh;
+		height: 70vh;
 		top: 10%;
 		left: 10%;
 	}
 	@media only screen and (min-width: 1024px) {
 		width: 70vw;
-		height: 80vh;
+		height: 60vh;
 		top: 10%;
 		left: 10%;
 	}
 	@media only screen and (min-width: 1280px) {
 		width: 30vw;
-		height: 80vh;
+		height: 60vh;
 		top: 10%;
 		left: 10%;
 	}
