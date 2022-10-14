@@ -7,113 +7,113 @@ export function Sponsers() {
       <SlideTrack>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-            height="100"
-            width="250"
+            src="1.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-            height="100"
-            width="250"
+            src="2.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-            height="100"
-            width="250"
+            src="3.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-            height="100"
-            width="250"
+            src="4.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-            height="100"
-            width="250"
+            src="5.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-            height="100"
-            width="250"
+            src="6.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-            height="100"
-            width="250"
+            src="7.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-            height="100"
-            width="250"
+            src="8.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-            height="100"
-            width="250"
+            src="1.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-            height="100"
-            width="250"
+            src="2.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-            height="100"
-            width="250"
+            src="3.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-            height="100"
-            width="250"
+            src="4.png"
+            height="125"
+            width="125"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-            height="100"
-            width="250"
+            src="5.png"
+            height="200"
+            width="200"
             alt=""
           />
         </Slide>
         <Slide>
           <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-            height="100"
-            width="250"
+            src="6.png"
+            height="200"
+            width="200"
             alt=""
           />
         </Slide>
@@ -190,8 +190,8 @@ export function Footer() {
 }
 
 const Slider = styled.div`
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
+  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+  height: 125px;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -200,11 +200,11 @@ const Slider = styled.div`
 
   &::before,
   &::after {
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
-      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 1) 0%,
       rgba(255, 255, 255, 0) 100%
-    );
+    ); */
     content: "";
     height: 100px;
     position: absolute;

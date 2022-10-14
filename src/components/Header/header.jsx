@@ -32,7 +32,6 @@ import Register from "./../Pages/Register/Register";
 
 export function Header() {
 	const [click, setClick] = React.useState(false);
-
 	const handleClick = () => setClick(!click);
 	const Close = () => setClick(false);
 

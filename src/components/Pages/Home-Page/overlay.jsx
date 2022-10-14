@@ -62,8 +62,8 @@ const Overlay = forwardRef(({ scroll }, ref) => (
 			</div>
 			<div>
 				<div className="footer">
-					{/* <h1 className="sponsers">SPONSERS</h1>
-					<Sponsers /> */}
+					<h1 className="sponsers">SPONSERS</h1>
+					<Sponsers />
 					<Footer />
 				</div>
 			</div>
